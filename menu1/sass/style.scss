@@ -129,9 +129,6 @@ body {
     text-align: center;
     height: 200px;
     @include margin;
-    &__logo {
-      margin: auto;
-    }
   }
 }
 

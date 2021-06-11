@@ -1,19 +1,11 @@
 {
-  "name": "p3_avrila_fabrice",
+  "name": "menu1",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch sass/style.scss:style.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fabedevweb/FabriceAvrila_3_04052021.git"
+    "sass": "sass --watch /Users/fabriceavrila/Desktop/projets_OCR/Projet_3_/menu1/sass/style.scss:menu1/style.css"
   },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/fabedevweb/FabriceAvrila_3_04052021/issues"
-  },
-  "homepage": "https://github.com/fabedevweb/FabriceAvrila_3_04052021#readme",
-  "description": ""
+  "license": "ISC"
 }
