@@ -34,10 +34,14 @@ $font: (
   familly: $font-title,
   familly-logo: $font-title,
   text: $font-text,
-  weith: 600,
+  weith: 300,
   font-size-h1: $font-size-h1,
   font-size-h2: $font-size-h2,
 );
+@mixin font-head {
+  font-family: map-get($map: $font, $key: familly-logo);
+  font-size: map-get($map: $font, $key: font-size-h1);
+}
 @mixin btn {
   width: auto;
   margin: auto;
@@ -127,7 +131,7 @@ body {
     grid-template-rows: 1fr;
     align-items: center;
     text-align: center;
-    height: 200px;
+    height: 150px;
     @include margin;
   }
 }
@@ -137,7 +141,7 @@ body {
   width: 1002px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 500px;
+  margin-top: 455px;
   padding-top: 80px;
   border-radius: 60px 60px 0 0;
   &__img {
@@ -146,7 +150,7 @@ body {
     position: absolute;
     z-index: -1;
     left: 0;
-    bottom: 200px;
+    bottom: 300px;
     &__meal {
       @include cards-img;
     }
@@ -158,35 +162,52 @@ body {
     margin: auto;
     justify-content: space-between;
     & h1 {
-      font-family: $font-title;
+      @include font-head;
+    }
+    & i {
+      font-size: 2rem;
     }
   }
-}
-
-.menu-starter {
-  width: 70%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 70px repeat(3, 1fr);
-  &__cards {
-    background-color: $color-eight;
-    margin-bottom: 25px;
-    border-radius: 20px;
-    &__child {
-      display: grid;
-      grid-template-columns: 1fr 50px;
-      grid-template-rows: repeat(2, 1fr);
-      width: 650px;
-      margin: auto;
-      & :nth-child(2) {
-        grid-row: 2;
-        grid-column: 1;
-      }
-      & :nth-child(3) {
-        grid-row: 2;
-        grid-column: 2;
-        justify-self: right;
+  .menu__meal {
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px repeat(3, 1fr);
+    &__head {
+      border-bottom: 4px $color-tertiary solid;
+      line-height: 10px;
+      width: 60px;
+      text-transform: uppercase;
+      font-weight: 100;
+    }
+    &__cards {
+      background-color: $color-eight;
+      margin-bottom: 25px;
+      border-radius: 20px;
+      height: 80px;
+      &__child {
+        display: grid;
+        grid-template-columns: 1fr 50px;
+        grid-template-rows: repeat(2, 30px);
+        width: 650px;
+        margin: auto;
+        padding-top: 8px;
+        &__head {
+          line-height: 0;
+        }
+        & :nth-child(2) {
+          grid-row: 2;
+          grid-column: 1;
+          line-height: 0;
+        }
+        & :nth-child(3) {
+          grid-row: 2;
+          grid-column: 2;
+          justify-self: right;
+          font-weight: 500;
+          line-height: 0;
+        }
       }
     }
   }
