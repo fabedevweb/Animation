@@ -1,0 +1,11 @@
+{
+  "name": "menu-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch /Users/fabriceavrila/Desktop/projets_OCR/FabriceAvrila_3_04052021/P3_Avrila_Fabrice/menu-1/sass_menu1/menu1.scss:/Users/fabriceavrila/Desktop/projets_OCR/FabriceAvrila_3_04052021/P3_Avrila_Fabrice/menu-1/menu1.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

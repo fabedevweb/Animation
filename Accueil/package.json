@@ -1,0 +1,19 @@
+{
+  "name": "p3_avrila_fabrice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/style.scss:style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabedevweb/FabriceAvrila_3_04052021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabedevweb/FabriceAvrila_3_04052021/issues"
+  },
+  "homepage": "https://github.com/fabedevweb/FabriceAvrila_3_04052021#readme",
+  "description": ""
+}
