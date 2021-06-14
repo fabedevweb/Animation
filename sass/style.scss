@@ -188,6 +188,7 @@ si mon écran est max-width:1024px alors width 334
     padding-top: 20px;
   }
 }
+
 $breakpoints: (
   mobile-small: 375px,
   mobile-medium: 576px,
@@ -308,7 +309,51 @@ body {
     row-gap: 30px;
     justify-items: center;
   }
-  & :nth-child(4) {
+  & .fa-circle {
+    position: relative;
+    color: $color-primary;
+    font-size: 2rem;
+    &--1 {
+      left: -12px;
+    }
+    &--1::after {
+      content: "1";
+      position: absolute;
+      color: white;
+      left: 9px;
+      top: 4px;
+      font-family: $font-text;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    &--2 {
+      left: -14px;
+    }
+    &--2::after {
+      content: "2";
+      position: absolute;
+      color: white;
+      left: 9px;
+      top: 4px;
+      font-family: $font-text;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    &--3 {
+      left: -13px;
+    }
+    &--3::after {
+      content: "3";
+      position: absolute;
+      color: white;
+      left: 9px;
+      top: 4px;
+      font-family: $font-text;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+  & :nth-child(6) {
     background-color: map-get(
       $map: $intensity-color,
       $key: ligthen-color-primary
@@ -342,8 +387,7 @@ body {
     display: flex;
     align-items: center;
     background-color: $color-four;
-    width: 260px;
-    padding-left: 30px;
+    width: 280px;
     border-radius: 20px;
     box-shadow: map-get($map: $intensity-color, $key: ligthen-color-seven) 0px
       5px 5px;
@@ -401,6 +445,50 @@ body {
           grid-template-columns: 1fr;
         }
       }
+      & .heart {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        left: 450px;
+        bottom: 60px;
+        @media screen and (max-width: 1024px) {
+          left: 295px;
+          bottom: 50px;
+        }
+        & .far {
+          font-size: 1.3rem;
+          position: absolute;
+          left: 2px;
+          bottom: 27px;
+        }
+        & .fas {
+          font-size: 1.5rem;
+          z-index: 1;
+          position: absolute;
+          cursor: pointer;
+          color: transparent;
+          &:hover {
+            background-image: -webkit-gradient(
+              linear,
+              left top,
+              right top,
+              color-stop(0.5, $color-primary),
+              color-stop(1, $color-secondary)
+            );
+            background-image: gradient(
+              linear,
+              left top,
+              right top,
+              color-stop(0.5, $color-primary),
+              color-stop(1, $color-secondary)
+            );
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-size: 1.5rem;
+          }
+        }
+      }
       &__img {
         @include cards-img;
         @media screen and (max-width: 1024px) {
@@ -411,7 +499,6 @@ body {
       &__text {
         margin-left: 15px;
         & h3 {
-          font-size: 1.3rem;
           @media screen and (max-width: 1024px) {
             font-size: 1.2rem;
             line-height: 0.4rem;
@@ -424,16 +511,6 @@ body {
           @media screen and (max-width: 1024px) {
             font-size: 1.2rem;
           }
-        }
-      }
-      & i {
-        font-size: 2rem;
-        position: relative;
-        left: 435px;
-        bottom: 70px;
-        @media screen and (max-width: 1024px) {
-          left: 280px;
-          bottom: 50px;
         }
       }
       &--citee {
