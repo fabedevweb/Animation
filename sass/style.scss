@@ -353,7 +353,7 @@ body {
       font-weight: 400;
     }
   }
-  & :nth-child(6) {
+  & :nth-child(4) {
     background-color: map-get(
       $map: $intensity-color,
       $key: ligthen-color-primary
@@ -398,6 +398,13 @@ body {
         font-size: 1.3rem;
         font-weight: 400;
       }
+    }
+    & .fa-mobile-alt,
+    .fa-list-ul {
+      color: $color-seven;
+    }
+    & .fa-store {
+      color: $color-primary;
     }
     @media screen and (max-width: 1024px) {
       width: 291px;

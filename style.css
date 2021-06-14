@@ -193,17 +193,17 @@ body {
   font-size: 1.5rem;
   font-weight: 400;
 }
-.section-working :nth-child(6) {
+.section-working :nth-child(4) {
   background-color: #f2eafb;
 }
 @media screen and (max-width: 1280px) {
-  .section-working :nth-child(6) {
+  .section-working :nth-child(4) {
     grid-row: 2;
     grid-column: 2;
   }
 }
 @media screen and (max-width: 1024px) {
-  .section-working :nth-child(6) {
+  .section-working :nth-child(4) {
     grid-row: 4;
     grid-column: 1;
   }
@@ -241,6 +241,13 @@ body {
     font-size: 1.3rem;
     font-weight: 400;
   }
+}
+.section-working__map .fa-mobile-alt,
+.section-working__map .fa-list-ul {
+  color: #7e7e7e;
+}
+.section-working__map .fa-store {
+  color: #9356dc;
 }
 @media screen and (max-width: 1024px) {
   .section-working__map {
