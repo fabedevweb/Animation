@@ -305,7 +305,7 @@ body {
     display: grid;
     width: 334px;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 20px repeat(3, 1fr);
     row-gap: 30px;
     justify-items: center;
   }
@@ -398,6 +398,10 @@ body {
         font-size: 1.3rem;
         font-weight: 400;
       }
+      @media screen and (max-width: 768px) {
+        font-size: 1.1rem;
+        font-weight: 400;
+      }
     }
     & .fa-mobile-alt,
     .fa-list-ul {
@@ -407,7 +411,11 @@ body {
       color: $color-primary;
     }
     @media screen and (max-width: 1024px) {
-      width: 291px;
+      width: 335px;
+    }
+    @media screen and (max-width: 768px) {
+      width: 322px;
+      height: 75px;
     }
   }
 }
@@ -416,6 +424,7 @@ body {
   background-color: $color-four;
   width: 100%;
   height: auto;
+  padding-top: 20px;
   &__child {
     display: grid;
     grid-template-rows: 80px 1fr 1fr;
@@ -599,11 +608,11 @@ body {
       padding-bottom: 50px;
     }
     @media screen and (max-width: 1024px) {
-      grid-template-rows: 80px repeat(2, 1fr);
+      grid-template-rows: 20px repeat(2, 1fr);
       grid-template-columns: repeat(2, 1fr);
     }
     @media screen and (max-width: 768px) {
-      grid-template-rows: 80px repeat(4, 1fr);
+      grid-template-rows: 20px repeat(4, 1fr);
       grid-template-columns: 334px;
       justify-content: center;
     }
@@ -686,6 +695,7 @@ body {
     }
     @media screen and (max-width: 768px) {
       display: block;
+      width: 334px;
     }
   }
   @media screen and (max-width: 768px) {
