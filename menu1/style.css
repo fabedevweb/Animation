@@ -153,15 +153,38 @@ body {
 .menu .menu__meal__btn {
   width: 240px;
   margin: 50px auto 0 auto;
-  padding: 20px;
+  padding: 19px 20px 0px 20px;
   text-align: center;
+  border: none;
   border-radius: 50px;
   cursor: pointer;
+  z-index: 1;
   background: linear-gradient(to top left, #9356dc, #ff79da);
   color: #fff;
   font-weight: 400;
   font-size: 1.3rem;
   box-shadow: #d7d7d7 0px 5px 5px;
+}
+.menu .menu__meal__btn p {
+  line-height: 0;
+}
+.menu .menu__meal__btn:hover::after {
+  opacity: 1;
+}
+.menu .menu__meal__btn::after {
+  content: "";
+  position: relative;
+  padding: 41px 190px 21px 50px;
+  left: -20px;
+  bottom: 20px;
+  text-align: center;
+  border-radius: 50px;
+  background: linear-gradient(to top left, #a16be0, #ff93e1);
+  box-shadow: 0px 0px 30px #7e7e7e;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 550ms;
+  border-radius: 50px;
 }
 .menu .menu__meal__head {
   border-bottom: 4px #99e2d0 solid;
@@ -225,6 +248,12 @@ body {
 }
 .footer__child__text i {
   margin-right: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .footer__child__text:nth-child(2) {
+    grid-row: 2;
+    grid-column: 1;
+  }
 }
 @media screen and (max-width: 992px) {
   .footer__child__text:nth-child(2) {
