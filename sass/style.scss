@@ -38,6 +38,7 @@ $font: (
   font-size-h1: $font-size-h1,
   font-size-h2: $font-size-h2,
 );
+/*
 @mixin btn {
   width: auto;
   margin: auto;
@@ -51,6 +52,7 @@ $font: (
   box-shadow: map-get($map: $intensity-color, $key: ligthen-color-seven) 0px 5px
     5px;
 }
+*/
 @mixin margin {
   width: 1200px;
 }
@@ -275,15 +277,51 @@ body {
       font-weight: 200;
       font-size: 1.5rem;
     }
-    &__btn {
-      @include btn;
-      @media screen and (max-width: 576px) {
-        width: 218px;
-        font-size: 1.2rem;
-      }
-    }
     @media screen and (max-width: 1280px) {
       padding: 50px 0 90px 0;
+    }
+    &__btn {
+      border-radius: 50px;
+      background: linear-gradient(
+        to top left,
+        $color-primary,
+        $color-secondary
+      );
+      border: none;
+      padding: 4px 17px;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+      color: $color-eight;
+      font-weight: 400;
+      font-size: 1.3rem;
+      box-shadow: map-get($map: $intensity-color, $key: ligthen-color-seven) 0px
+        5px 5px;
+      &:hover {
+        border-radius: 50px;
+        &::after {
+          border-radius: 50px;
+          opacity: 1;
+        }
+      }
+      &::after {
+        border-radius: 50px;
+        content: "";
+        position: absolute;
+        box-shadow: 0px 0px 30px $color-seven;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(
+          to top left,
+          lighten($color-primary, 5%),
+          lighten($color-secondary, 5%)
+        );
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 550ms;
+      }
     }
   }
 }
