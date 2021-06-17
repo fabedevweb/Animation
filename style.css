@@ -102,7 +102,7 @@ body {
   border-radius: 50%;
 }
 
-@-webkit-keyframes spin {
+@keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
