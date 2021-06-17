@@ -40,52 +40,53 @@ body {
   font-weight: 600;
 }
 
-.bloc-page__loading-main {
+.bloc-page__loading-bg {
+  width: 100%;
+  height: 221%;
+  background-color: #9356dc;
+  opacity: 0;
   position: absolute;
+  z-index: 200;
+  animation: bg 3000ms ease-in-out;
+}
+@media screen and (max-width: 1280px) {
+  .bloc-page__loading-bg {
+    height: 299%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .bloc-page__loading-bg {
+    height: 203%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .bloc-page__loading-bg {
+    height: 274%;
+  }
+}
+.bloc-page__loading-main {
+  opacity: 0;
+  position: fixed;
+  z-index: 300;
   width: 50px;
   height: 50px;
   border: 10px #99e2d0 solid;
   border-radius: 50%;
-  top: 50%;
+  top: 40%;
   left: 48%;
+  animation: spin 3000ms linear;
 }
-.bloc-page__loading-main__logo {
-  position: absolute;
-  left: 39%;
-  color: white;
-  font-family: "Shrikhand", cursive;
+@media screen and (max-width: 1024px) {
+  .bloc-page__loading-main {
+    top: 30%;
+    left: 47%;
+  }
 }
-.bloc-page__loading-main__logo--o {
-  color: transparent;
-  animation: text 3000ms 0ms;
-}
-.bloc-page__loading-main__logo--h {
-  color: transparent;
-  animation: text 2000ms 375ms;
-}
-.bloc-page__loading-main__logo--m {
-  color: transparent;
-  animation: text 2000ms 750ms;
-}
-.bloc-page__loading-main__logo--y {
-  color: transparent;
-  animation: text 2000ms 1100ms;
-}
-.bloc-page__loading-main__logo--f {
-  color: transparent;
-  animation: text 2000ms 1475ms;
-}
-.bloc-page__loading-main__logo--o {
-  color: transparent;
-  animation: text 2000ms 1850ms;
-}
-.bloc-page__loading-main__logo--o {
-  color: transparent;
-  animation: text 2000ms 2225ms;
-}
-.bloc-page__loading-main__logo--d {
-  color: transparent;
-  animation: text 2000ms 3000ms;
+@media screen and (max-width: 768px) {
+  .bloc-page__loading-main {
+    top: 30%;
+    left: 46%;
+  }
 }
 .bloc-page__loading-main__ball {
   position: relative;
@@ -94,7 +95,7 @@ body {
   left: -10px;
   bottom: 10px;
   transform-origin: center;
-  animation: spin 3000ms;
+  animation: spin 3000ms linear;
   border: 10px solid transparent;
   border-top-color: #9356dc;
   border-bottom-color: #ff79da;
@@ -105,31 +106,24 @@ body {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+    opacity: 1;
   }
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-  }
-}
-@keyframes text {
-  0% {
-    transform: scale(0);
-    color: black;
     opacity: 0;
   }
-  50% {
-    transform: scale(0);
-    color: black;
-    opacity: 1;
+}
+@keyframes bg {
+  0% {
+    opacity: 0.5;
   }
   100% {
-    transform: scale(2);
-    color: black;
     opacity: 0;
   }
 }
 .header {
-  z-index: 1;
+  z-index: 100;
   background: linear-gradient(to bottom, #cfcfcf, #eaeaea 10%);
   position: fixed;
   width: 100%;
@@ -164,6 +158,11 @@ body {
 }
 .header__child__title {
   font-family: "Shrikhand", cursive;
+}
+@media screen and (max-width: 768px) {
+  .header__child__title {
+    margin-top: 0;
+  }
 }
 .header__child__loc {
   display: flex;
