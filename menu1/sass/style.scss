@@ -315,27 +315,32 @@ body {
         border-radius: 0 20px 20px 0;
         background-color: $color-tertiary;
         transform: translate(101px);
-        transition: 500ms ease-in-out;
+        transition: 250ms ease-in-out;
         @media screen and (max-width: 992px) {
           left: 807px;
+        }
+        @media screen and (max-width: 375px) {
+          transform: translate(75px);
         }
         &::after {
           content: "25€";
           display: block;
           position: absolute;
-          width: 54px;
-          height: 20px;
-          padding-top: 56px;
+          width: auto;
+          margin-top: 57px;
           padding-bottom: 4px;
+          padding-left: 20px;
           top: -10px;
-          left: -80px;
+          left: -99px;
           font-weight: 500;
-          transition: 500ms ease-in-out;
+          transition: 250ms ease-in-out;
+          z-index: 200;
+          background-color: white;
         }
         & .fas {
           display: block;
           position: absolute;
-          left: 36%;
+          left: 31%;
           top: 32%;
           font-family: "Font Awesome 5 Free";
           font-weight: 600;
@@ -348,6 +353,75 @@ body {
           transform: rotate(-360deg);
           transition: 500ms 50ms ease-in-out;
           */
+        }
+        &--velouté {
+          &::after {
+            content: "35€";
+          }
+        }
+        &--soupe {
+          &::after {
+            content: "20€";
+          }
+        }
+        &--coquilles {
+          &::after {
+            content: "40€";
+          }
+        }
+        &--magret {
+          &::before {
+            content: "...";
+            display: block;
+            position: relative;
+            left: -77px;
+            top: 46px;
+            background-color: white;
+            width: 25px;
+            height: 100px;
+            z-index: 100;
+            font-weight: 700;
+          }
+          &::after {
+            content: "35€";
+          }
+        }
+        &--pigeonneau {
+          &::before {
+            content: "...";
+            display: block;
+            position: relative;
+            left: -77px;
+            top: 46px;
+            background-color: white;
+            width: 25px;
+            height: 100px;
+            z-index: 100;
+            font-weight: 700;
+          }
+          &::after {
+            content: "44€";
+          }
+        }
+        &--petales {
+          &::after {
+            content: "18€";
+          }
+        }
+        &--fondant {
+          &::after {
+            content: "22€";
+          }
+        }
+        &--coquilles {
+          &::after {
+            content: "40€";
+          }
+        }
+        &--millefeuille {
+          &::after {
+            content: "23€";
+          }
         }
       }
       & p {
@@ -363,7 +437,7 @@ body {
             transform: translate(40px);
           }
           & .fa-check-circle {
-            animation: check 500ms linear forwards;
+            animation: check 250ms linear forwards;
           }
         }
         &__head {
