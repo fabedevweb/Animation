@@ -1,0 +1,507 @@
+@charset "UTF-8";
+/*
+si mon écran est max-width:1024px alors width 334
+
+@mixin ($multi:multi){
+  @if max-width:1024
+  alors @function multi($nb) {
+  $resultat: $nb * 1.5;
+  @return $resultat;
+}
+  @else 
+*/
+@media screen and (max-width: 1000px) {
+  html,
+body {
+    overflow-x: hidden;
+  }
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.header__child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  text-align: center;
+  height: 63px;
+}
+.header__child__head {
+  width: 196px;
+  height: 34px;
+}
+.header__child__arrow {
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 992px) {
+  .header__child {
+    width: 80%;
+  }
+}
+
+.background-meal {
+  height: 800px;
+  background: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-size: cover;
+  background-position: bottom;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .background-meal {
+    height: 600px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .background-meal {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .background-meal {
+    height: 290px;
+  }
+}
+
+.menu {
+  background-color: #f6f6f6;
+  width: 1002px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 700px;
+  border-radius: 60px 60px 0 0;
+  height: 1500px;
+}
+@media screen and (max-width: 992px) {
+  .menu {
+    width: 100%;
+    margin-top: 638px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    margin-top: 480px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .menu {
+    margin-top: 320px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .menu {
+    margin-top: 235px;
+  }
+}
+.menu__head {
+  display: flex;
+  align-items: center;
+  width: 93%;
+  margin: auto;
+  justify-content: space-between;
+}
+.menu__head h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2rem;
+}
+.menu__head i {
+  font-size: 2rem;
+}
+.menu__head .heart {
+  width: 50px;
+  height: 50px;
+  left: 450px;
+  bottom: 60px;
+}
+.menu__head .heart .far {
+  font-size: 1.3rem;
+  position: relative;
+  left: 26px;
+  bottom: -17px;
+}
+.menu__head .heart .fas {
+  font-size: 1.5rem;
+  z-index: 1;
+  position: relative;
+  bottom: -19px;
+  cursor: pointer;
+  color: transparent;
+}
+.menu__head .heart .fas:hover {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.5, #9356dc), color-stop(1, #ff79da));
+  background-image: gradient(linear, left top, right top, color-stop(0.5, #9356dc), color-stop(1, #ff79da));
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 1.5rem;
+}
+.menu .menu__meal {
+  width: 93%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px repeat(3, 1fr);
+}
+.menu .menu__meal__btn {
+  width: 240px;
+  margin: 50px auto 0 auto;
+  padding: 19px 20px 0px 20px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1;
+  background: linear-gradient(to top left, #9356dc, #ff79da);
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.3rem;
+  box-shadow: #d7d7d7 0px 5px 5px;
+}
+.menu .menu__meal__btn p {
+  line-height: 0;
+}
+.menu .menu__meal__btn:hover::after {
+  opacity: 1;
+}
+.menu .menu__meal__btn::after {
+  content: "";
+  position: relative;
+  padding: 41px 190px 21px 50px;
+  left: -20px;
+  bottom: 20px;
+  text-align: center;
+  border-radius: 50px;
+  background: linear-gradient(to top left, #a16be0, #ff93e1);
+  box-shadow: 0px 0px 30px #7e7e7e;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 550ms;
+  border-radius: 50px;
+}
+.menu .menu__meal__head {
+  border-bottom: 4px #99e2d0 solid;
+  line-height: 10px;
+  width: 60px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.menu .menu__meal__cards {
+  display: flex;
+  background-color: #fff;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  height: 80px;
+  min-width: 350px;
+  box-shadow: 0 0 15px #7e7e7e;
+  cursor: pointer;
+  overflow: hidden;
+}
+.menu .menu__meal__cards__tick {
+  height: 80px;
+  width: 100px;
+  border-radius: 0 20px 20px 0;
+  background-color: #99e2d0;
+  transform: translate(101px);
+  transition: 250ms ease-in-out;
+}
+@media screen and (max-width: 992px) {
+  .menu .menu__meal__cards__tick {
+    left: 807px;
+  }
+}
+.menu .menu__meal__cards__tick::after {
+  content: "25€";
+  display: block;
+  position: absolute;
+  width: 37px;
+  margin-top: 57px;
+  padding-bottom: 4px;
+  padding-left: 20px;
+  top: -10px;
+  left: -99px;
+  font-weight: 500;
+  transition: 250ms ease-in-out;
+  z-index: 200;
+  background-color: white;
+}
+.menu .menu__meal__cards__tick .fas {
+  display: block;
+  position: absolute;
+  left: 31%;
+  top: 32%;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "";
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  z-index: 100;
+  /*
+  transform: rotate(-360deg);
+  transition: 500ms 50ms ease-in-out;
+  */
+}
+@media screen and (max-width: 375px) {
+  .menu .menu__meal__cards__tick--velouté::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -80px;
+    top: 46px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
+.menu .menu__meal__cards__tick--velouté::after {
+  content: "35€";
+}
+.menu .menu__meal__cards__tick--soupe::after {
+  content: "20€";
+}
+.menu .menu__meal__cards__tick--coquilles::after {
+  content: "40€";
+}
+@media screen and (max-width: 375px) {
+  .menu .menu__meal__cards__tick--magret::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -77px;
+    top: 46px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
+.menu .menu__meal__cards__tick--magret::after {
+  content: "35€";
+}
+@media screen and (max-width: 443px) {
+  .menu .menu__meal__cards__tick--pigeonneau::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -77px;
+    top: 46px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
+.menu .menu__meal__cards__tick--pigeonneau::after {
+  content: "44€";
+}
+.menu .menu__meal__cards__tick--petales::after {
+  content: "18€";
+}
+.menu .menu__meal__cards__tick--fondant::after {
+  content: "22€";
+}
+.menu .menu__meal__cards__tick--coquilles::after {
+  content: "40€";
+}
+.menu .menu__meal__cards__tick--millefeuille::after {
+  content: "23€";
+}
+.menu .menu__meal__cards p {
+  z-index: 100;
+}
+.menu .menu__meal__cards__child {
+  width: 96%;
+  margin-left: 23px;
+  padding-top: 10px;
+}
+.menu .menu__meal__cards__child:hover + .menu__meal__cards__tick {
+  transform: translate(0px);
+}
+.menu .menu__meal__cards__child:hover + .menu__meal__cards__tick::after {
+  transform: translate(40px);
+}
+.menu .menu__meal__cards__child:hover + .menu__meal__cards__tick .fa-check-circle {
+  animation: check 250ms linear forwards;
+}
+.menu .menu__meal__cards__child__head {
+  line-height: 0;
+}
+.menu .menu__meal__cards__child :nth-child(2) {
+  grid-row: 2;
+  grid-column: 1;
+  line-height: 1;
+}
+.menu .menu__meal__cards__child :nth-child(3) {
+  grid-row: 2;
+  grid-column: 2;
+  justify-self: right;
+  font-weight: 500;
+  line-height: 0;
+}
+.menu .menu__meal__cards:nth-child(2) {
+  opacity: 0;
+  animation: cards-1 1000ms cubic-bezier(0, 1.08, 0.57, 1) forwards;
+}
+.menu .menu__meal__cards:nth-child(3) {
+  opacity: 0;
+  animation: cards-2 1000ms 100ms cubic-bezier(0, 1.08, 0.57, 1) forwards;
+}
+.menu .menu__meal__cards:nth-child(4) {
+  opacity: 0;
+  animation: cards-3 1000ms 200ms cubic-bezier(0, 1.08, 0.57, 1) forwards;
+}
+
+@keyframes check {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes cards-1 {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes cards-2 {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes cards-3 {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.footer {
+  background-color: #353535;
+}
+.footer__child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  margin: auto;
+  width: 1200px;
+  margin: auto;
+  color: #fff;
+}
+.footer__child__logo__img {
+  font-family: "Shrikhand", cursive;
+}
+.footer__child__text {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.footer__child__text i {
+  margin-right: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .footer__child__text:nth-child(2) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+}
+@media screen and (max-width: 992px) {
+  .footer__child__text:nth-child(2) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__child__text:nth-child(2) {
+    line-height: 0px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer__child__text:nth-child(3) {
+    grid-row: 3;
+    grid-column: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__child__text:nth-child(3) {
+    line-height: 0px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer__child__text:nth-child(4) {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: right;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__child__text:nth-child(4) {
+    line-height: 0px;
+    display: block;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer__child__text:nth-child(5) {
+    grid-row: 3;
+    grid-column: 2;
+    justify-self: right;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__child__text:nth-child(5) {
+    line-height: 40px;
+    display: block;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer__child {
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__child {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 310px;
+    margin-top: 0;
+    line-height: 0;
+    padding-top: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

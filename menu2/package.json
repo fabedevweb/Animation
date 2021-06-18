@@ -1,0 +1,11 @@
+{
+  "name": "menu1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch /Users/fabriceavrila/Desktop/projets_OCR/Projet_3_/menu2/sass/style.scss:./style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
