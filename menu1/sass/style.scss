@@ -319,14 +319,11 @@ body {
         @media screen and (max-width: 992px) {
           left: 807px;
         }
-        @media screen and (max-width: 375px) {
-          transform: translate(75px);
-        }
         &::after {
           content: "25€";
           display: block;
           position: absolute;
-          width: auto;
+          width: 37px;
           margin-top: 57px;
           padding-bottom: 4px;
           padding-left: 20px;
@@ -355,6 +352,20 @@ body {
           */
         }
         &--velouté {
+          &::before {
+            @media screen and (max-width: 375px) {
+              content: "...";
+              display: block;
+              position: relative;
+              left: -80px;
+              top: 46px;
+              background-color: white;
+              width: 25px;
+              height: 100px;
+              z-index: 100;
+              font-weight: 700;
+            }
+          }
           &::after {
             content: "35€";
           }
@@ -371,16 +382,18 @@ body {
         }
         &--magret {
           &::before {
-            content: "...";
-            display: block;
-            position: relative;
-            left: -77px;
-            top: 46px;
-            background-color: white;
-            width: 25px;
-            height: 100px;
-            z-index: 100;
-            font-weight: 700;
+            @media screen and (max-width: 375px) {
+              content: "...";
+              display: block;
+              position: relative;
+              left: -77px;
+              top: 46px;
+              background-color: white;
+              width: 25px;
+              height: 100px;
+              z-index: 100;
+              font-weight: 700;
+            }
           }
           &::after {
             content: "35€";
@@ -388,16 +401,18 @@ body {
         }
         &--pigeonneau {
           &::before {
-            content: "...";
-            display: block;
-            position: relative;
-            left: -77px;
-            top: 46px;
-            background-color: white;
-            width: 25px;
-            height: 100px;
-            z-index: 100;
-            font-weight: 700;
+            @media screen and (max-width: 443px) {
+              content: "...";
+              display: block;
+              position: relative;
+              left: -77px;
+              top: 46px;
+              background-color: white;
+              width: 25px;
+              height: 100px;
+              z-index: 100;
+              font-weight: 700;
+            }
           }
           &::after {
             content: "44€";
@@ -429,7 +444,7 @@ body {
       }
       &__child {
         width: 96%;
-        margin-left: 25px;
+        margin-left: 23px;
         padding-top: 10px;
         &:hover + .menu__meal__cards__tick {
           transform: translate(0px);

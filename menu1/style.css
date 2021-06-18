@@ -217,16 +217,11 @@ body {
     left: 807px;
   }
 }
-@media screen and (max-width: 375px) {
-  .menu .menu__meal__cards__tick {
-    transform: translate(75px);
-  }
-}
 .menu .menu__meal__cards__tick::after {
   content: "25€";
   display: block;
   position: absolute;
-  width: auto;
+  width: 37px;
   margin-top: 57px;
   padding-bottom: 4px;
   padding-left: 20px;
@@ -254,6 +249,20 @@ body {
   transition: 500ms 50ms ease-in-out;
   */
 }
+@media screen and (max-width: 375px) {
+  .menu .menu__meal__cards__tick--velouté::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -80px;
+    top: 46px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
 .menu .menu__meal__cards__tick--velouté::after {
   content: "35€";
 }
@@ -263,32 +272,36 @@ body {
 .menu .menu__meal__cards__tick--coquilles::after {
   content: "40€";
 }
-.menu .menu__meal__cards__tick--magret::before {
-  content: "...";
-  display: block;
-  position: relative;
-  left: -77px;
-  top: 46px;
-  background-color: white;
-  width: 25px;
-  height: 100px;
-  z-index: 100;
-  font-weight: 700;
+@media screen and (max-width: 375px) {
+  .menu .menu__meal__cards__tick--magret::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -77px;
+    top: 46px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
 }
 .menu .menu__meal__cards__tick--magret::after {
   content: "35€";
 }
-.menu .menu__meal__cards__tick--pigeonneau::before {
-  content: "...";
-  display: block;
-  position: relative;
-  left: -77px;
-  top: 46px;
-  background-color: white;
-  width: 25px;
-  height: 100px;
-  z-index: 100;
-  font-weight: 700;
+@media screen and (max-width: 443px) {
+  .menu .menu__meal__cards__tick--pigeonneau::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -77px;
+    top: 46px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
 }
 .menu .menu__meal__cards__tick--pigeonneau::after {
   content: "44€";
@@ -310,7 +323,7 @@ body {
 }
 .menu .menu__meal__cards__child {
   width: 96%;
-  margin-left: 25px;
+  margin-left: 23px;
   padding-top: 10px;
 }
 .menu .menu__meal__cards__child:hover + .menu__meal__cards__tick {
