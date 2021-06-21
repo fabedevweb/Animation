@@ -570,6 +570,39 @@ a {
         justify-self: left;
       }
     }
+    & .heart-test {
+      &::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 100;
+        content: "\f004";
+        position: absolute;
+        font-size: 2rem;
+        left: 50%;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      &__build {
+        width: 50px;
+        height: 50px;
+        border: red 2px solid;
+        position: absolute;
+        left: 50%;
+        &:hover + .heart-test__bar {
+          transform: scaleY(1);
+          transform-origin: bottom;
+        }
+      }
+      &__bar {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        position: absolute;
+        left: 45%;
+        transform: scaleY(0);
+        transition: 500ms;
+      }
+    }
+
     &__cards {
       &__new {
         position: absolute;
