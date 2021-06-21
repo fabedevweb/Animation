@@ -210,6 +210,10 @@ body {
   font-weight: map-get($font, weith);
 }
 
+a {
+  text-decoration: none;
+}
+
 .bloc-page {
   &__loading-bg {
     width: 100%;
