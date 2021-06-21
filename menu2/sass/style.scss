@@ -124,6 +124,11 @@ body {
   font-weight: map-get($font, weith);
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .header {
   &__child {
     display: grid;
