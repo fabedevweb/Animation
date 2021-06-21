@@ -226,8 +226,8 @@ a {
   content: "25€";
   display: block;
   position: absolute;
-  width: 37px;
-  margin-top: 57px;
+  width: 39px;
+  padding-top: 57px;
   padding-bottom: 4px;
   padding-left: 20px;
   top: -10px;
@@ -249,10 +249,11 @@ a {
   color: white;
   text-align: center;
   z-index: 100;
-  /*
-  transform: rotate(-360deg);
-  transition: 500ms 50ms ease-in-out;
-  */
+}
+@media screen and (max-width: 375px) {
+  .menu .menu__meal__cards__tick .fas {
+    left: 25%;
+  }
 }
 @media screen and (max-width: 375px) {
   .menu .menu__meal__cards__tick--velouté::before {
@@ -260,7 +261,8 @@ a {
     display: block;
     position: relative;
     left: -80px;
-    top: 46px;
+    top: -4px;
+    padding-top: 50px;
     background-color: white;
     width: 25px;
     height: 100px;
@@ -277,8 +279,22 @@ a {
 .menu .menu__meal__cards__tick--coquilles::after {
   content: "40€";
 }
+@media screen and (max-width: 443px) {
+  .menu .menu__meal__cards__tick--coquilles::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -78px;
+    top: 20px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
 @media screen and (max-width: 375px) {
-  .menu .menu__meal__cards__tick--magret::before {
+  .menu .menu__meal__cards__tick--coquilles--magret::before {
     content: "...";
     display: block;
     position: relative;
@@ -291,24 +307,13 @@ a {
     font-weight: 700;
   }
 }
-.menu .menu__meal__cards__tick--magret::after {
+.menu .menu__meal__cards__tick--coquilles--magret::after {
   content: "35€";
 }
-@media screen and (max-width: 443px) {
-  .menu .menu__meal__cards__tick--pigeonneau::before {
-    content: "...";
-    display: block;
-    position: relative;
-    left: -77px;
-    top: 46px;
-    background-color: white;
-    width: 25px;
-    height: 100px;
-    z-index: 100;
-    font-weight: 700;
-  }
+.menu .menu__meal__cards__tick--coquilles--pigeonneau {
+  content: "";
 }
-.menu .menu__meal__cards__tick--pigeonneau::after {
+.menu .menu__meal__cards__tick--coquilles::after {
   content: "44€";
 }
 .menu .menu__meal__cards__tick--petales::after {
@@ -328,7 +333,7 @@ a {
 }
 .menu .menu__meal__cards__child {
   width: 96%;
-  margin-left: 23px;
+  margin-left: 13px;
   padding-top: 10px;
 }
 .menu .menu__meal__cards__child:hover + .menu__meal__cards__tick {
@@ -339,6 +344,10 @@ a {
 }
 .menu .menu__meal__cards__child:hover + .menu__meal__cards__tick .fa-check-circle {
   animation: check 250ms linear forwards;
+}
+.menu .menu__meal__cards__child h3 {
+  width: 274px;
+  font-size: 1.1rem;
 }
 .menu .menu__meal__cards__child__head {
   line-height: 0;

@@ -351,10 +351,9 @@ a {
           color: white;
           text-align: center;
           z-index: 100;
-          /*
-          transform: rotate(-360deg);
-          transition: 500ms 50ms ease-in-out;
-          */
+          @media screen and (max-width: 375px) {
+            left: 24%;
+          }
         }
         &--velouté {
           &::before {
@@ -363,7 +362,7 @@ a {
               display: block;
               position: relative;
               left: -80px;
-              top: 46px;
+              top: 44px;
               background-color: white;
               width: 25px;
               height: 100px;
@@ -376,11 +375,39 @@ a {
           }
         }
         &--soupe {
+          &::before {
+            @media screen and (max-width: 375px) {
+              content: "...";
+              display: block;
+              position: relative;
+              left: -80px;
+              top: 44px;
+              background-color: white;
+              width: 25px;
+              height: 100px;
+              z-index: 100;
+              font-weight: 700;
+            }
+          }
           &::after {
             content: "20€";
           }
         }
         &--coquilles {
+          &::before {
+            @media screen and (max-width: 375px) {
+              content: "...";
+              display: block;
+              position: relative;
+              left: -80px;
+              top: 34px;
+              background-color: white;
+              width: 49px;
+              height: 100px;
+              z-index: 100;
+              font-weight: 700;
+            }
+          }
           &::after {
             content: "40€";
           }
@@ -392,9 +419,9 @@ a {
               display: block;
               position: relative;
               left: -77px;
-              top: 46px;
+              top: 34px;
               background-color: white;
-              width: 25px;
+              width: 69px;
               height: 100px;
               z-index: 100;
               font-weight: 700;
@@ -405,20 +432,6 @@ a {
           }
         }
         &--pigeonneau {
-          &::before {
-            @media screen and (max-width: 443px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -77px;
-              top: 46px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
-            }
-          }
           &::after {
             content: "44€";
           }
@@ -429,6 +442,20 @@ a {
           }
         }
         &--fondant {
+          &::before {
+            @media screen and (max-width: 375px) {
+              content: "...";
+              display: block;
+              position: relative;
+              left: -77px;
+              top: 43px;
+              background-color: white;
+              width: 69px;
+              height: 100px;
+              z-index: 100;
+              font-weight: 700;
+            }
+          }
           &::after {
             content: "22€";
           }
@@ -439,6 +466,20 @@ a {
           }
         }
         &--millefeuille {
+          &::before {
+            @media screen and (max-width: 375px) {
+              content: "...";
+              display: block;
+              position: relative;
+              left: -88px;
+              top: 34px;
+              background-color: white;
+              width: 69px;
+              height: 100px;
+              z-index: 100;
+              font-weight: 700;
+            }
+          }
           &::after {
             content: "23€";
           }
@@ -449,8 +490,14 @@ a {
       }
       &__child {
         width: 96%;
-        margin-left: 23px;
+        padding-left: 13px;
         padding-top: 10px;
+        @media screen and (max-width: 375px) {
+          width: 128%;
+        }
+        &--paddingtop {
+          padding-top: 0;
+        }
         &:hover + .menu__meal__cards__tick {
           transform: translate(0px);
           &::after {
@@ -462,6 +509,7 @@ a {
         }
         &__head {
           line-height: 0;
+          font-size: 1.1rem;
         }
         & :nth-child(2) {
           grid-row: 2;

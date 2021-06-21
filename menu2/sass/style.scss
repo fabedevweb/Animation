@@ -328,8 +328,8 @@ a {
           content: "25€";
           display: block;
           position: absolute;
-          width: 37px;
-          margin-top: 57px;
+          width: 39px;
+          padding-top: 57px;
           padding-bottom: 4px;
           padding-left: 20px;
           top: -10px;
@@ -351,10 +351,9 @@ a {
           color: white;
           text-align: center;
           z-index: 100;
-          /*
-          transform: rotate(-360deg);
-          transition: 500ms 50ms ease-in-out;
-          */
+          @media screen and (max-width: 375px) {
+            left: 25%;
+          }
         }
         &--velouté {
           &::before {
@@ -363,7 +362,8 @@ a {
               display: block;
               position: relative;
               left: -80px;
-              top: 46px;
+              top: -4px;
+              padding-top: 50px;
               background-color: white;
               width: 25px;
               height: 100px;
@@ -384,40 +384,41 @@ a {
           &::after {
             content: "40€";
           }
-        }
-        &--magret {
-          &::before {
-            @media screen and (max-width: 375px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -77px;
-              top: 46px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
-            }
-          }
-          &::after {
-            content: "35€";
-          }
-        }
-        &--pigeonneau {
           &::before {
             @media screen and (max-width: 443px) {
               content: "...";
               display: block;
               position: relative;
-              left: -77px;
-              top: 46px;
+              left: -78px;
+              top: 20px;
               background-color: white;
               width: 25px;
               height: 100px;
               z-index: 100;
               font-weight: 700;
             }
+          }
+          &--magret {
+            &::before {
+              @media screen and (max-width: 375px) {
+                content: "...";
+                display: block;
+                position: relative;
+                left: -77px;
+                top: 46px;
+                background-color: white;
+                width: 25px;
+                height: 100px;
+                z-index: 100;
+                font-weight: 700;
+              }
+            }
+            &::after {
+              content: "35€";
+            }
+          }
+          &--pigeonneau {
+            content: "";
           }
           &::after {
             content: "44€";
@@ -449,7 +450,7 @@ a {
       }
       &__child {
         width: 96%;
-        margin-left: 23px;
+        margin-left: 13px;
         padding-top: 10px;
         &:hover + .menu__meal__cards__tick {
           transform: translate(0px);
@@ -459,6 +460,10 @@ a {
           & .fa-check-circle {
             animation: check 250ms linear forwards;
           }
+        }
+        & h3 {
+          width: 274px;
+          font-size: 1.1rem;
         }
         &__head {
           line-height: 0;

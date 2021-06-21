@@ -251,12 +251,17 @@ a {
   z-index: 100;
 }
 @media screen and (max-width: 375px) {
+  .menu .menu__meal__cards__tick .fas {
+    left: 24%;
+  }
+}
+@media screen and (max-width: 375px) {
   .menu .menu__meal__cards__tick--velouté::before {
     content: "...";
     display: block;
     position: relative;
     left: -80px;
-    top: 46px;
+    top: 44px;
     background-color: white;
     width: 25px;
     height: 100px;
@@ -267,8 +272,36 @@ a {
 .menu .menu__meal__cards__tick--velouté::after {
   content: "35€";
 }
+@media screen and (max-width: 375px) {
+  .menu .menu__meal__cards__tick--soupe::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -80px;
+    top: 44px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
 .menu .menu__meal__cards__tick--soupe::after {
   content: "20€";
+}
+@media screen and (max-width: 375px) {
+  .menu .menu__meal__cards__tick--coquilles::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -80px;
+    top: 34px;
+    background-color: white;
+    width: 49px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
 }
 .menu .menu__meal__cards__tick--coquilles::after {
   content: "40€";
@@ -279,9 +312,9 @@ a {
     display: block;
     position: relative;
     left: -77px;
-    top: 46px;
+    top: 34px;
     background-color: white;
-    width: 25px;
+    width: 69px;
     height: 100px;
     z-index: 100;
     font-weight: 700;
@@ -290,31 +323,45 @@ a {
 .menu .menu__meal__cards__tick--magret::after {
   content: "35€";
 }
-@media screen and (max-width: 443px) {
-  .menu .menu__meal__cards__tick--pigeonneau::before {
-    content: "...";
-    display: block;
-    position: relative;
-    left: -77px;
-    top: 46px;
-    background-color: white;
-    width: 25px;
-    height: 100px;
-    z-index: 100;
-    font-weight: 700;
-  }
-}
 .menu .menu__meal__cards__tick--pigeonneau::after {
   content: "44€";
 }
 .menu .menu__meal__cards__tick--petales::after {
   content: "18€";
 }
+@media screen and (max-width: 375px) {
+  .menu .menu__meal__cards__tick--fondant::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -77px;
+    top: 43px;
+    background-color: white;
+    width: 69px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
 .menu .menu__meal__cards__tick--fondant::after {
   content: "22€";
 }
 .menu .menu__meal__cards__tick--coquilles::after {
   content: "40€";
+}
+@media screen and (max-width: 375px) {
+  .menu .menu__meal__cards__tick--millefeuille::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -88px;
+    top: 34px;
+    background-color: white;
+    width: 69px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
 }
 .menu .menu__meal__cards__tick--millefeuille::after {
   content: "23€";
@@ -324,8 +371,16 @@ a {
 }
 .menu .menu__meal__cards__child {
   width: 96%;
-  margin-left: 23px;
+  padding-left: 13px;
   padding-top: 10px;
+}
+@media screen and (max-width: 375px) {
+  .menu .menu__meal__cards__child {
+    width: 128%;
+  }
+}
+.menu .menu__meal__cards__child--paddingtop {
+  padding-top: 0;
 }
 .menu .menu__meal__cards__child:hover + .menu__meal__cards__tick {
   transform: translate(0px);
@@ -338,6 +393,7 @@ a {
 }
 .menu .menu__meal__cards__child__head {
   line-height: 0;
+  font-size: 1.1rem;
 }
 .menu .menu__meal__cards__child :nth-child(2) {
   grid-row: 2;
@@ -364,14 +420,6 @@ a {
   animation: cards-3 1000ms 200ms cubic-bezier(0, 1.08, 0.57, 1) forwards;
 }
 
-@keyframes heart {
-  from {
-    transform: scaleY(0);
-  }
-  to {
-    transform: scaleY(1);
-  }
-}
 @keyframes check {
   from {
     transform: rotate(0deg);
