@@ -377,7 +377,7 @@ a {
         $color-secondary
       );
       border: none;
-      padding: 4px 17px;
+      padding: 20px 17px;
       position: relative;
       z-index: 1;
       cursor: pointer;
@@ -647,50 +647,6 @@ a {
         @media screen and (max-width: 768px) {
           grid-template-rows: 80px repeat(5, 1fr);
           grid-template-columns: 1fr;
-        }
-      }
-      & .heart {
-        width: 50px;
-        height: 50px;
-        position: relative;
-        left: 450px;
-        bottom: 60px;
-        @media screen and (max-width: 1024px) {
-          left: 295px;
-          bottom: 50px;
-        }
-        & .far {
-          font-size: 1.3rem;
-          position: absolute;
-          left: 2px;
-          bottom: 27px;
-        }
-        & .fas {
-          font-size: 1.5rem;
-          z-index: 1;
-          position: absolute;
-          cursor: pointer;
-          color: transparent;
-          &:hover {
-            background-image: -webkit-gradient(
-              linear,
-              left top,
-              right top,
-              color-stop(0.5, $color-primary),
-              color-stop(1, $color-secondary)
-            );
-            background-image: gradient(
-              linear,
-              left top,
-              right top,
-              color-stop(0.5, $color-primary),
-              color-stop(1, $color-secondary)
-            );
-            color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-            font-size: 1.5rem;
-          }
         }
       }
       &__img {

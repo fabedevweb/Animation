@@ -217,7 +217,7 @@ a {
   border-radius: 50px;
   background: linear-gradient(to top left, #9356dc, #ff79da);
   border: none;
-  padding: 4px 17px;
+  padding: 20px 17px;
   position: relative;
   z-index: 1;
   cursor: pointer;
@@ -497,40 +497,6 @@ a {
     grid-template-rows: 80px repeat(5, 1fr);
     grid-template-columns: 1fr;
   }
-}
-.article__child__cards .heart {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  left: 450px;
-  bottom: 60px;
-}
-@media screen and (max-width: 1024px) {
-  .article__child__cards .heart {
-    left: 295px;
-    bottom: 50px;
-  }
-}
-.article__child__cards .heart .far {
-  font-size: 1.3rem;
-  position: absolute;
-  left: 2px;
-  bottom: 27px;
-}
-.article__child__cards .heart .fas {
-  font-size: 1.5rem;
-  z-index: 1;
-  position: absolute;
-  cursor: pointer;
-  color: transparent;
-}
-.article__child__cards .heart .fas:hover {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.5, #9356dc), color-stop(1, #ff79da));
-  background-image: gradient(linear, left top, right top, color-stop(0.5, #9356dc), color-stop(1, #ff79da));
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-size: 1.5rem;
 }
 .article__child__cards__img {
   width: 501px;
