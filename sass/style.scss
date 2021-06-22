@@ -570,36 +570,56 @@ a {
         justify-self: left;
       }
     }
-    & .heart-test {
+
+    .heart-test {
+      display: block;
+      height: 70px;
+      width: 70px;
+      position: relative;
+      left: 90%;
+      top: -16%;
       &::after {
         font-family: "Font Awesome 5 Free";
-        font-weight: 100;
+        font-weight: 200;
         content: "\f004";
         position: absolute;
         font-size: 2rem;
-        left: 50%;
-        overflow: hidden;
-        cursor: pointer;
+        z-index: 4;
       }
-      &__build {
-        width: 50px;
-        height: 50px;
-        border: red 2px solid;
+      &__fill {
+        display: block;
+        height: 31px;
+        left: 0px;
+        overflow: hidden;
         position: absolute;
-        left: 50%;
-        &:hover + .heart-test__bar {
-          transform: scaleY(1);
-          transform-origin: bottom;
+        top: 0px;
+        width: 32px;
+        z-index: 3;
+        transition: height 2s ease-in-out;
+        &::before,
+        &::after {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f004";
+          position: absolute;
+          font-size: 2rem;
+          color: white;
         }
       }
-      &__bar {
-        width: 200px;
-        height: 200px;
-        background-color: green;
+      & .fa-heart {
         position: absolute;
-        left: 45%;
-        transform: scaleY(0);
-        transition: 500ms;
+        margin-left: 0px;
+        font-size: 2rem;
+        background: linear-gradient(
+          to top left,
+          lighten($color-primary, 5%),
+          lighten($color-secondary, 5%)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      &:hover .heart-test__fill {
+        height: 0px;
       }
     }
 
