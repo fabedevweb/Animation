@@ -203,44 +203,63 @@ a {
     & i {
       font-size: 2rem;
     }
-    & .heart {
-      width: 50px;
-      height: 50px;
-      left: 450px;
-      bottom: 60px;
-      & .far {
-        font-size: 1.3rem;
-        position: relative;
-        left: 26px;
-        bottom: -17px;
+    & .heart-test {
+      display: block;
+      height: 34px;
+      width: 31px;
+      position: relative;
+      left: 0%;
+      top: -16%;
+      @media screen and (max-width: 1024px) {
+        left: 85%;
+        top: -19%;
       }
-      & .fas {
-        font-size: 1.5rem;
-        z-index: 1;
-        position: relative;
-        bottom: -19px;
-        cursor: pointer;
-        color: transparent;
-        &:hover {
-          background-image: -webkit-gradient(
-            linear,
-            left top,
-            right top,
-            color-stop(0.5, $color-primary),
-            color-stop(1, $color-secondary)
-          );
-          background-image: gradient(
-            linear,
-            left top,
-            right top,
-            color-stop(0.5, $color-primary),
-            color-stop(1, $color-secondary)
-          );
-          color: transparent;
-          -webkit-background-clip: text;
-          background-clip: text;
-          font-size: 1.5rem;
+      @media screen and (max-width: 992px) {
+        left: 85%;
+        top: -20%;
+      }
+      &::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 200;
+        content: "\f004";
+        position: absolute;
+        font-size: 2rem;
+        z-index: 4;
+      }
+      &__fill {
+        display: block;
+        height: 31px;
+        left: 0px;
+        overflow: hidden;
+        position: absolute;
+        top: 0px;
+        width: 32px;
+        z-index: 3;
+        transition: height 2s ease-in-out;
+        &::before,
+        &::after {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f004";
+          position: absolute;
+          font-size: 2rem;
+          color: white;
         }
+      }
+      & .fa-heart {
+        position: absolute;
+        margin-left: 0px;
+        font-size: 2rem;
+        background: linear-gradient(
+          to top left,
+          lighten($color-primary, 5%),
+          lighten($color-secondary, 5%)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      &:hover .heart-test__fill {
+        height: 0px;
       }
     }
   }

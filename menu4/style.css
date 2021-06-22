@@ -120,33 +120,63 @@ a {
 .menu__head i {
   font-size: 2rem;
 }
-.menu__head .heart {
-  width: 50px;
-  height: 50px;
-  left: 450px;
-  bottom: 60px;
-}
-.menu__head .heart .far {
-  font-size: 1.3rem;
+.menu__head .heart-test {
+  display: block;
+  height: 34px;
+  width: 31px;
   position: relative;
-  left: 26px;
-  bottom: -17px;
+  left: 0%;
+  top: -16%;
 }
-.menu__head .heart .fas {
-  font-size: 1.5rem;
-  z-index: 1;
-  position: relative;
-  bottom: -19px;
-  cursor: pointer;
-  color: transparent;
+@media screen and (max-width: 1024px) {
+  .menu__head .heart-test {
+    left: 85%;
+    top: -19%;
+  }
 }
-.menu__head .heart .fas:hover {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.5, #9356dc), color-stop(1, #ff79da));
-  background-image: gradient(linear, left top, right top, color-stop(0.5, #9356dc), color-stop(1, #ff79da));
-  color: transparent;
+@media screen and (max-width: 992px) {
+  .menu__head .heart-test {
+    left: 85%;
+    top: -20%;
+  }
+}
+.menu__head .heart-test::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 200;
+  content: "";
+  position: absolute;
+  font-size: 2rem;
+  z-index: 4;
+}
+.menu__head .heart-test__fill {
+  display: block;
+  height: 31px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+  z-index: 3;
+  transition: height 2s ease-in-out;
+}
+.menu__head .heart-test__fill::before, .menu__head .heart-test__fill::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  position: absolute;
+  font-size: 2rem;
+  color: white;
+}
+.menu__head .heart-test .fa-heart {
+  position: absolute;
+  margin-left: 0px;
+  font-size: 2rem;
+  background: linear-gradient(to top left, #a16be0, #ff93e1);
   -webkit-background-clip: text;
-  background-clip: text;
-  font-size: 1.5rem;
+  -webkit-text-fill-color: transparent;
+}
+.menu__head .heart-test:hover .heart-test__fill {
+  height: 0px;
 }
 .menu .menu__meal {
   width: 93%;

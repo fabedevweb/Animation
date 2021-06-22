@@ -552,11 +552,25 @@ a {
 
 .article__child .heart-test {
   display: block;
-  height: 70px;
-  width: 70px;
+  height: 34px;
+  width: 31px;
   position: relative;
   left: 90%;
   top: -16%;
+}
+
+@media screen and (max-width: 1024px) {
+  .article__child .heart-test {
+    left: 85%;
+    top: -19%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .article__child .heart-test {
+    left: 85%;
+    top: -20%;
+  }
 }
 
 .article__child .heart-test::after {
