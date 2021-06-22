@@ -623,6 +623,7 @@ a {
         width: 32px;
         z-index: 3;
         transition: height 2s ease-in-out;
+        -webkit-transition: height 2s ease-in-out;
         &::before,
         &::after {
           font-family: "Font Awesome 5 Free";
