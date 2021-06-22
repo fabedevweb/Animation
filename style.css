@@ -439,58 +439,6 @@ a {
     justify-self: left;
   }
 }
-.article__child .heart-test {
-  display: block;
-  height: 34px;
-  width: 31px;
-  position: relative;
-  left: 90%;
-  top: -16%;
-}
-@media screen and (max-width: 1024px) {
-  .article__child .heart-test {
-    left: 85%;
-  }
-}
-.article__child .heart-test::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 200;
-  content: "";
-  position: absolute;
-  font-size: 2rem;
-  z-index: 4;
-}
-.article__child .heart-test__fill {
-  display: block;
-  height: 31px;
-  left: 0px;
-  overflow: hidden;
-  position: absolute;
-  top: 0px;
-  width: 32px;
-  z-index: 3;
-  transition: height 2s ease-in-out;
-  -webkit-transition: height 2s ease-in-out;
-}
-.article__child .heart-test__fill::before, .article__child .heart-test__fill::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "";
-  position: absolute;
-  font-size: 2rem;
-  color: white;
-}
-.article__child .heart-test .fa-heart {
-  position: absolute;
-  margin-left: 0px;
-  font-size: 2rem;
-  background: linear-gradient(to top left, #a16be0, #ff93e1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.article__child .heart-test:hover .heart-test__fill {
-  height: 0px;
-}
 .article__child__cards__new {
   position: absolute;
   margin-left: 400px;
@@ -527,6 +475,69 @@ a {
 }
 .article__child__cards__text {
   margin-left: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.article__child__cards__text :nth-child(2) {
+  grid-row: 2;
+  grid-column: 1;
+}
+.article__child__cards__text :nth-child(3) {
+  grid-row: 1;
+  grid-column: 2;
+}
+.article__child__cards__text .heart-test {
+  display: block;
+  height: 34px;
+  width: 31px;
+  position: relative;
+  left: 80%;
+  top: 5%;
+}
+@media screen and (max-width: 1024px) {
+  .article__child__cards__text .heart-test {
+    left: 85%;
+  }
+}
+.article__child__cards__text .heart-test::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 200;
+  content: "";
+  position: absolute;
+  font-size: 2rem;
+  z-index: 4;
+}
+.article__child__cards__text .heart-test__fill {
+  display: block;
+  height: 31px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+  z-index: 3;
+  transition: height 2s ease-in-out;
+  -webkit-transition: height 2s ease-in-out;
+}
+.article__child__cards__text .heart-test__fill::before, .article__child__cards__text .heart-test__fill::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  position: absolute;
+  font-size: 2rem;
+  color: white;
+}
+.article__child__cards__text .heart-test .fa-heart {
+  position: absolute;
+  margin-left: 0px;
+  font-size: 2rem;
+  background: linear-gradient(to top left, #a16be0, #ff93e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.article__child__cards__text .heart-test:hover .heart-test__fill {
+  height: 0px;
 }
 @media screen and (max-width: 1024px) {
   .article__child__cards__text h3 {

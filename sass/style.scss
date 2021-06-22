@@ -595,62 +595,6 @@ a {
       }
     }
 
-    .heart-test {
-      display: block;
-      height: 34px;
-      width: 31px;
-      position: relative;
-      left: 90%;
-      top: -16%;
-      @media screen and (max-width: 1024px) {
-        left: 85%;
-      }
-      &::after {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 200;
-        content: "\f004";
-        position: absolute;
-        font-size: 2rem;
-        z-index: 4;
-      }
-      &__fill {
-        display: block;
-        height: 31px;
-        left: 0px;
-        overflow: hidden;
-        position: absolute;
-        top: 0px;
-        width: 32px;
-        z-index: 3;
-        transition: height 2s ease-in-out;
-        -webkit-transition: height 2s ease-in-out;
-        &::before,
-        &::after {
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
-          content: "\f004";
-          position: absolute;
-          font-size: 2rem;
-          color: white;
-        }
-      }
-      & .fa-heart {
-        position: absolute;
-        margin-left: 0px;
-        font-size: 2rem;
-        background: linear-gradient(
-          to top left,
-          lighten($color-primary, 5%),
-          lighten($color-secondary, 5%)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      &:hover .heart-test__fill {
-        height: 0px;
-      }
-    }
-
     &__cards {
       &__new {
         position: absolute;
@@ -678,6 +622,72 @@ a {
       }
       &__text {
         margin-left: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        & :nth-child(2) {
+          grid-row: 2;
+          grid-column: 1;
+        }
+        & :nth-child(3) {
+          grid-row: 1;
+          grid-column: 2;
+        }
+        & .heart-test {
+          display: block;
+          height: 34px;
+          width: 31px;
+          position: relative;
+          left: 80%;
+          top: 5%;
+          @media screen and (max-width: 1024px) {
+            left: 85%;
+          }
+          &::after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 200;
+            content: "\f004";
+            position: absolute;
+            font-size: 2rem;
+            z-index: 4;
+          }
+          &__fill {
+            display: block;
+            height: 31px;
+            left: 0px;
+            overflow: hidden;
+            position: absolute;
+            top: 0px;
+            width: 32px;
+            z-index: 3;
+            transition: height 2s ease-in-out;
+            -webkit-transition: height 2s ease-in-out;
+            &::before,
+            &::after {
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              content: "\f004";
+              position: absolute;
+              font-size: 2rem;
+              color: white;
+            }
+          }
+          & .fa-heart {
+            position: absolute;
+            margin-left: 0px;
+            font-size: 2rem;
+            background: linear-gradient(
+              to top left,
+              lighten($color-primary, 5%),
+              lighten($color-secondary, 5%)
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          &:hover .heart-test__fill {
+            height: 0px;
+          }
+        }
         & h3 {
           @media screen and (max-width: 1024px) {
             font-size: 1.2rem;
