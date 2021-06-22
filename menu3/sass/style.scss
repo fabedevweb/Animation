@@ -629,6 +629,9 @@ a {
       align-items: center;
       font-size: 1.5rem;
       font-weight: 400;
+      & a {
+        color: $color-eight;
+      }
       & i {
         margin-right: 20px;
       }

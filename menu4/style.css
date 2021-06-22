@@ -510,6 +510,9 @@ a {
   font-size: 1.5rem;
   font-weight: 400;
 }
+.footer__child__text a {
+  color: #fff;
+}
 .footer__child__text i {
   margin-right: 20px;
 }

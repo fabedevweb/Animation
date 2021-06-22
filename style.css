@@ -718,6 +718,9 @@ a {
 .footer__child__text i {
   margin-right: 20px;
 }
+.footer__child__text a {
+  color: #fff;
+}
 @media screen and (max-width: 1280px) {
   .footer__child__text:nth-child(2) {
     grid-row: 2;

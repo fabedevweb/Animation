@@ -950,6 +950,10 @@ a {
   margin-right: 20px;
 }
 
+.footer__child__text a {
+  color: #fff;
+}
+
 @media screen and (max-width: 1280px) {
   .footer__child__text:nth-child(2) {
     -ms-grid-row: 2;

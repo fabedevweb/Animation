@@ -832,6 +832,9 @@ a {
       & i {
         margin-right: 20px;
       }
+      & a {
+        color: $color-eight;
+      }
       &:nth-child(2) {
         @media screen and (max-width: 1280px) {
           grid-row: 2;
