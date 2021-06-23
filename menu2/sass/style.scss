@@ -377,6 +377,9 @@ a {
           color: white;
           text-align: center;
           z-index: 100;
+          @media screen and (max-width: 414px) {
+            left: 27%;
+          }
           @media screen and (max-width: 375px) {
             left: 25%;
           }
@@ -416,7 +419,7 @@ a {
               display: block;
               position: relative;
               left: -78px;
-              top: 20px;
+              top: 17px;
               background-color: white;
               width: 25px;
               height: 100px;
@@ -475,7 +478,7 @@ a {
         z-index: 100;
       }
       &__child {
-        width: 96%;
+        width: 117%;
         margin-left: 13px;
         padding-top: 10px;
         &:hover + .menu__meal__cards__tick {
@@ -488,7 +491,7 @@ a {
           }
         }
         & h3 {
-          width: 274px;
+          width: 294px;
           font-size: 1rem;
         }
         &__head {
