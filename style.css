@@ -484,6 +484,7 @@ a {
 @media screen and (max-width: 1024px) {
   .article__child__cards__text {
     margin-top: 4px;
+    grid-template-columns: 252px 1fr;
   }
 }
 .article__child__cards__text :nth-child(2) {
@@ -504,7 +505,7 @@ a {
 }
 @media screen and (max-width: 1024px) {
   .article__child__cards__text .heart-test {
-    left: 70%;
+    left: 33%;
   }
 }
 .article__child__cards__text .heart-test::after {
