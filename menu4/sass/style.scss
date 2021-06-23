@@ -323,6 +323,13 @@ a {
         border-radius: 50px;
       }
     }
+    &__head {
+      border-bottom: 4px $color-tertiary solid;
+      line-height: 10px;
+      width: 60px;
+      text-transform: uppercase;
+      font-weight: 100;
+    }
     &__cards {
       display: flex;
       background-color: $color-eight;
