@@ -648,6 +648,7 @@ a {
           top: 5%;
           @media screen and (max-width: 1024px) {
             left: 33%;
+            top: 20%;
           }
           &::after {
             font-family: "Font Awesome 5 Free";
@@ -696,7 +697,7 @@ a {
         }
         & h3 {
           @media screen and (max-width: 1024px) {
-            font-size: 1.1rem;
+            font-size: 1rem;
           }
         }
         & p {
@@ -704,7 +705,7 @@ a {
           font-weight: 300;
           line-height: 0;
           @media screen and (max-width: 1024px) {
-            font-size: 1.2rem;
+            font-size: 1rem;
           }
         }
       }

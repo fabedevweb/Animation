@@ -506,6 +506,7 @@ a {
 @media screen and (max-width: 1024px) {
   .article__child__cards__text .heart-test {
     left: 33%;
+    top: 20%;
   }
 }
 .article__child__cards__text .heart-test::after {
@@ -549,7 +550,7 @@ a {
 }
 @media screen and (max-width: 1024px) {
   .article__child__cards__text h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 .article__child__cards__text p {
@@ -559,7 +560,7 @@ a {
 }
 @media screen and (max-width: 1024px) {
   .article__child__cards__text p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 .article__child__cards--citee {
