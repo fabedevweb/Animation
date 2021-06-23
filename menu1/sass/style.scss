@@ -289,10 +289,16 @@ a {
       color: $color-eight;
       font-weight: 400;
       font-size: 1.3rem;
+      -webkit-box-shadow: map-get(
+          $map: $intensity-color,
+          $key: ligthen-color-seven
+        )
+        0px 5px 5px;
       box-shadow: map-get($map: $intensity-color, $key: ligthen-color-seven) 0px
         5px 5px;
       &:hover {
         &::after {
+          -webkit-opacity: 1;
           opacity: 1;
         }
       }
@@ -309,9 +315,12 @@ a {
           lighten($color-primary, 5%),
           lighten($color-secondary, 5%)
         );
+        -webkit-box-shadow: 0px 0px 30px $color-seven;
         box-shadow: 0px 0px 30px $color-seven;
+        -webkit-opacity: 0;
         opacity: 0;
         z-index: -1;
+        -webkit-transition: opacity 550ms;
         transition: opacity 550ms;
         border-radius: 50px;
       }
