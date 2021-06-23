@@ -516,7 +516,7 @@ a {
   position: absolute;
   font-size: 1.7rem;
   z-index: 4;
-  top: -2px;
+  top: -1px;
 }
 .article__child__cards__text .heart-test__fill {
   display: block;
@@ -542,8 +542,6 @@ a {
   position: absolute;
   margin-left: 0px;
   font-size: 1.7rem;
-  line-height: 0;
-  top: 20px;
   background: linear-gradient(to top left, #a16be0, #ff93e1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
