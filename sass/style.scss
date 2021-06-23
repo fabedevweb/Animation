@@ -657,6 +657,7 @@ a {
             position: absolute;
             font-size: 1.7rem;
             z-index: 4;
+            top: -1px;
           }
           &__fill {
             display: block;
@@ -683,6 +684,8 @@ a {
             position: absolute;
             margin-left: 0px;
             font-size: 1.7rem;
+            line-height: 0;
+            top: 20px;
             background: linear-gradient(
               to top left,
               lighten($color-primary, 5%),
