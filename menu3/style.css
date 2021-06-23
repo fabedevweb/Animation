@@ -297,7 +297,7 @@ a {
     left: 27%;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .menu .menu__meal__cards__tick--ravioles::before {
     content: "...";
     display: block;
@@ -311,7 +311,7 @@ a {
     font-weight: 700;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .menu .menu__meal__cards__tick--velouté::before {
     content: "...";
     display: block;
@@ -328,7 +328,7 @@ a {
 .menu .menu__meal__cards__tick--velouté::after {
   content: "35€";
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .menu .menu__meal__cards__tick--soupe::before {
     content: "...";
     display: block;
@@ -351,7 +351,7 @@ a {
 .menu .menu__meal__cards__tick--magret::after {
   content: "35€";
 }
-@media screen and (max-width: 443px) {
+@media screen and (max-width: 414px) {
   .menu .menu__meal__cards__tick--pigeonneau::before {
     content: "...";
     display: block;
@@ -371,7 +371,7 @@ a {
 .menu .menu__meal__cards__tick--petales::after {
   content: "18€";
 }
-@media screen and (max-width: 443px) {
+@media screen and (max-width: 414px) {
   .menu .menu__meal__cards__tick--petales::before {
     content: "...";
     display: block;

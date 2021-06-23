@@ -283,7 +283,7 @@ a {
   text-align: center;
   z-index: 100;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .menu .menu__meal__cards__tick--velouté::before {
     content: "...";
     display: block;
@@ -306,7 +306,7 @@ a {
 .menu .menu__meal__cards__tick--coquilles::after {
   content: "40€";
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .menu .menu__meal__cards__tick--magret::before {
     content: "...";
     display: block;

@@ -389,7 +389,7 @@ a {
         }
         &--ravioles {
           &::before {
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: 414px) {
               content: "...";
               display: block;
               position: relative;
@@ -405,7 +405,7 @@ a {
         }
         &--velouté {
           &::before {
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: 414px) {
               content: "...";
               display: block;
               position: relative;
@@ -424,7 +424,7 @@ a {
         }
         &--soupe {
           &::before {
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: 414px) {
               content: "...";
               display: block;
               position: relative;
@@ -453,7 +453,7 @@ a {
         }
         &--pigeonneau {
           &::before {
-            @media screen and (max-width: 443px) {
+            @media screen and (max-width: 414px) {
               content: "...";
               display: block;
               position: relative;
@@ -475,7 +475,7 @@ a {
             content: "18€";
           }
           &::before {
-            @media screen and (max-width: 443px) {
+            @media screen and (max-width: 414px) {
               content: "...";
               display: block;
               position: relative;

@@ -380,7 +380,7 @@ a {
         }
         &--velouté {
           &::before {
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: 414px) {
               content: "...";
               display: block;
               position: relative;
@@ -409,7 +409,7 @@ a {
         }
         &--magret {
           &::before {
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: 414px) {
               content: "...";
               display: block;
               position: relative;

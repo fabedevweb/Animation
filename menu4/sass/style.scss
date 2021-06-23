@@ -375,77 +375,21 @@ a {
           }
         }
         &--velouté {
-          &::before {
-            @media screen and (max-width: 375px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -80px;
-              top: 44px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
-            }
-          }
           &::after {
             content: "35€";
           }
         }
         &--soupe {
-          &::before {
-            @media screen and (max-width: 375px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -80px;
-              top: 44px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
-            }
-          }
           &::after {
             content: "20€";
           }
         }
         &--coquilles {
-          &::before {
-            @media screen and (max-width: 375px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -80px;
-              top: 34px;
-              background-color: white;
-              width: 49px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
-            }
-          }
           &::after {
             content: "40€";
           }
         }
         &--magret {
-          &::before {
-            @media screen and (max-width: 375px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -77px;
-              top: 34px;
-              background-color: white;
-              width: 69px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
-            }
-          }
           &::after {
             content: "35€";
           }
@@ -462,7 +406,7 @@ a {
         }
         &--fondant {
           &::before {
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: 414px) {
               content: "...";
               display: block;
               position: relative;
@@ -485,20 +429,6 @@ a {
           }
         }
         &--millefeuille {
-          &::before {
-            @media screen and (max-width: 375px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -88px;
-              top: 34px;
-              background-color: white;
-              width: 69px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
-            }
-          }
           &::after {
             content: "23€";
           }
@@ -508,14 +438,11 @@ a {
         z-index: 100;
       }
       &__child {
-        width: 96%;
+        width: 103%;
         padding-left: 13px;
         padding-top: 10px;
         @media screen and (max-width: 375px) {
           width: 128%;
-        }
-        &--paddingtop {
-          padding-top: 0;
         }
         &:hover + .menu__meal__cards__tick {
           transform: translate(0px);
