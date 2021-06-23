@@ -475,9 +475,16 @@ a {
 }
 .article__child__cards__text {
   margin-left: 15px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 31px 27px;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .article__child__cards__text {
+    margin-top: 4px;
+  }
 }
 .article__child__cards__text :nth-child(2) {
   grid-row: 2;
@@ -497,7 +504,7 @@ a {
 }
 @media screen and (max-width: 1024px) {
   .article__child__cards__text .heart-test {
-    left: 85%;
+    left: 70%;
   }
 }
 .article__child__cards__text .heart-test::after {
@@ -505,7 +512,7 @@ a {
   font-weight: 200;
   content: "";
   position: absolute;
-  font-size: 2rem;
+  font-size: 1.7rem;
   z-index: 4;
 }
 .article__child__cards__text .heart-test__fill {
@@ -525,13 +532,13 @@ a {
   font-weight: 900;
   content: "";
   position: absolute;
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: white;
 }
 .article__child__cards__text .heart-test .fa-heart {
   position: absolute;
   margin-left: 0px;
-  font-size: 2rem;
+  font-size: 1.7rem;
   background: linear-gradient(to top left, #a16be0, #ff93e1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -541,12 +548,11 @@ a {
 }
 @media screen and (max-width: 1024px) {
   .article__child__cards__text h3 {
-    font-size: 1.2rem;
-    line-height: 0.4rem;
+    font-size: 1.1rem;
   }
 }
 .article__child__cards__text p {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 300;
   line-height: 0;
 }
