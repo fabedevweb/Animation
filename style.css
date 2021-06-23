@@ -516,7 +516,7 @@ a {
   position: absolute;
   font-size: 1.7rem;
   z-index: 4;
-  top: -1px;
+  top: -2px;
 }
 .article__child__cards__text .heart-test__fill {
   display: block;
