@@ -210,14 +210,6 @@ a {
       position: relative;
       left: 0%;
       top: -16%;
-      @media screen and (max-width: 1024px) {
-        left: 85%;
-        top: -19%;
-      }
-      @media screen and (max-width: 992px) {
-        left: 85%;
-        top: -20%;
-      }
       &::after {
         font-family: "Font Awesome 5 Free";
         font-weight: 200;

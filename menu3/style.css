@@ -128,18 +128,6 @@ a {
   left: 0%;
   top: -16%;
 }
-@media screen and (max-width: 1024px) {
-  .menu__head .heart-test {
-    left: 85%;
-    top: -19%;
-  }
-}
-@media screen and (max-width: 992px) {
-  .menu__head .heart-test {
-    left: 85%;
-    top: -20%;
-  }
-}
 .menu__head .heart-test::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 200;
