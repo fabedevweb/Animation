@@ -587,8 +587,8 @@ a {
 }
 .article__child__cards .heart-test {
   display: block;
-  height: 34px;
-  width: 31px;
+  height: 40px;
+  width: 50px;
   position: relative;
   left: 90%;
   top: -13%;
