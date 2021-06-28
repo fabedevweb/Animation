@@ -38,21 +38,6 @@ $font: (
   font-size-h1: $font-size-h1,
   font-size-h2: $font-size-h2,
 );
-/*
-@mixin btn {
-  width: auto;
-  margin: auto;
-  padding: 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  background: linear-gradient(to top left, $color-primary, $color-secondary);
-  color: $color-eight;
-  font-weight: 400;
-  font-size: 1.3rem;
-  box-shadow: map-get($map: $intensity-color, $key: ligthen-color-seven) 0px 5px
-    5px;
-}
-*/
 @mixin margin {
   width: 1200px;
 }
@@ -86,18 +71,6 @@ $multi: (
   border-radius: 15px;
   height: 370px;
 }
-
-/*
-si mon écran est max-width:1024px alors width 334
-
-@mixin ($multi:multi){
-  @if max-width:1024
-  alors @function multi($nb) {
-  $resultat: $nb * 1.5;
-  @return $resultat;
-}
-  @else 
-*/
 
 @media screen and (max-width: 1024px) {
   html,
@@ -201,7 +174,6 @@ $breakpoints: (
   desktop: 1280px,
 );
 
-/*----------------------------------------------------------------*/
 html,
 body {
   margin: 0;
@@ -646,6 +618,7 @@ a {
           position: relative;
           left: 80%;
           top: 5%;
+          z-index: 99;
           @media screen and (max-width: 1024px) {
             left: 33%;
             top: 20%;

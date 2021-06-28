@@ -1,15 +1,4 @@
 @charset "UTF-8";
-/*
-si mon écran est max-width:1024px alors width 334
-
-@mixin ($multi:multi){
-  @if max-width:1024
-  alors @function multi($nb) {
-  $resultat: $nb * 1.5;
-  @return $resultat;
-}
-  @else 
-*/
 @media screen and (max-width: 1000px) {
   html,
 body {
