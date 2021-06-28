@@ -610,64 +610,7 @@ a {
         & :nth-child(3) {
           grid-row: 1;
           grid-column: 2;
-        }
-        & .heart-test {
-          display: block;
-          height: 34px;
-          width: 31px;
-          position: relative;
-          left: 80%;
-          top: 5%;
-          z-index: 99;
-          @media screen and (max-width: 1024px) {
-            left: 33%;
-            top: 20%;
-          }
-          &::after {
-            font-family: "Font Awesome 5 Free";
-            font-weight: 200;
-            content: "\f004";
-            position: absolute;
-            font-size: 1.7rem;
-            z-index: 4;
-            top: -1px;
-          }
-          &__fill {
-            display: block;
-            height: 31px;
-            left: 0px;
-            overflow: hidden;
-            position: absolute;
-            top: 0px;
-            width: 32px;
-            z-index: 3;
-            transition: height 2s ease-in-out;
-            -webkit-transition: height 2s ease-in-out;
-            &::before,
-            &::after {
-              font-family: "Font Awesome 5 Free";
-              font-weight: 900;
-              content: "\f004";
-              position: absolute;
-              font-size: 1.7rem;
-              color: white;
-            }
-          }
-          & .fa-heart {
-            position: absolute;
-            margin-left: 0px;
-            font-size: 1.7rem;
-            background: linear-gradient(
-              to top left,
-              lighten($color-primary, 5%),
-              lighten($color-secondary, 5%)
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
-          &:hover .heart-test__fill {
-            height: 0px;
-          }
+          pointer-events: initial;
         }
         & h3 {
           @media screen and (max-width: 1024px) {
@@ -751,6 +694,65 @@ a {
         @media screen and (max-width: 768px) {
           grid-row: 5;
           grid-column: 1;
+        }
+      }
+      & .heart-test {
+        display: block;
+        height: 34px;
+        width: 31px;
+        position: relative;
+        left: 90%;
+        top: -13%;
+        z-index: 99;
+        @media screen and (max-width: 1024px) {
+          left: 87%;
+          top: -20%;
+        }
+        &::after {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 200;
+          content: "\f004";
+          position: absolute;
+          font-size: 1.7rem;
+          z-index: 4;
+          top: -1px;
+        }
+        &__fill {
+          display: block;
+          height: 31px;
+          left: 0px;
+          overflow: hidden;
+          position: absolute;
+          top: 0px;
+          width: 32px;
+          z-index: 3;
+          transition: height 2s ease-in-out;
+          -webkit-transition: height 2s ease-in-out;
+          &::before,
+          &::after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f004";
+            position: absolute;
+            font-size: 1.7rem;
+            color: white;
+          }
+        }
+        & .fa-heart {
+          position: absolute;
+          margin-left: 0px;
+          font-size: 1.7rem;
+          background: linear-gradient(
+            to top left,
+            lighten($color-primary, 5%),
+            lighten($color-secondary, 5%)
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &:hover .heart-test__fill {
+          height: 0px;
+          pointer-events: unset;
         }
       }
     }
