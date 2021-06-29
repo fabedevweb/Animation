@@ -116,6 +116,14 @@ $breakpoints: (
   desktop: 1280px,
 );
 
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 html,
 body {
   margin: 0;
@@ -252,7 +260,7 @@ a {
     margin-top: 235px;
   }
   &__head {
-    display: flex;
+    @include flexbox;
     align-items: center;
     width: 93%;
     margin: auto;
@@ -268,8 +276,6 @@ a {
       height: 34px;
       width: 31px;
       position: relative;
-      left: 0%;
-      top: -16%;
       &::after {
         font-family: "Font Awesome 5 Free";
         font-weight: 200;
@@ -300,6 +306,7 @@ a {
       }
       & .fa-heart {
         position: absolute;
+        top: 1px;
         margin-left: 0px;
         font-size: 2rem;
         background: linear-gradient(

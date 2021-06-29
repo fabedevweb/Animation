@@ -20,7 +20,7 @@ a {
 
 .bloc-page__loading-bg {
   width: 100%;
-  height: 233%;
+  height: 217%;
   background-color: black;
   opacity: 0;
   position: absolute;
@@ -30,17 +30,17 @@ a {
 }
 @media screen and (max-width: 1280px) {
   .bloc-page__loading-bg {
-    height: 358%;
+    height: 297%;
   }
 }
 @media screen and (max-width: 1024px) {
   .bloc-page__loading-bg {
-    height: 243%;
+    height: 201%;
   }
 }
 @media screen and (max-width: 768px) {
   .bloc-page__loading-bg {
-    height: 329%;
+    height: 272%;
   }
 }
 .bloc-page__loading-main {

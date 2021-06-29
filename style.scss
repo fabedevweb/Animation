@@ -190,7 +190,7 @@ a {
 .bloc-page {
   &__loading-bg {
     width: 100%;
-    height: 233%;
+    height: 217%;
     background-color: black;
     opacity: 0;
     position: absolute;
@@ -198,13 +198,13 @@ a {
     -webkit-animation: bg 3000ms ease-in-out forwards;
     animation: bg 3000ms ease-in-out forwards;
     @media screen and (max-width: 1280px) {
-      height: 358%;
+      height: 297%;
     }
     @media screen and (max-width: 1024px) {
-      height: 243%;
+      height: 201%;
     }
     @media screen and (max-width: 768px) {
-      height: 329%;
+      height: 272%;
     }
   }
   &__loading-main {
