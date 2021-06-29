@@ -88,6 +88,18 @@ $multi: (
   border-radius: 15px;
   height: 370px;
 }
+@mixin tick-price {
+  content: "...";
+  display: block;
+  position: relative;
+  left: -80px;
+  top: 41px;
+  background-color: white;
+  width: 25px;
+  height: 100px;
+  z-index: 100;
+  font-weight: 700;
+}
 
 @media screen and (max-width: 1000px) {
   html,
@@ -421,16 +433,7 @@ a {
         &--ravioles {
           &::before {
             @media screen and (max-width: 414px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -80px;
-              top: 41px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
+              @include tick-price;
             }
           }
         }
@@ -442,16 +445,7 @@ a {
         &--bouchée {
           &::before {
             @media screen and (max-width: 414px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -80px;
-              top: 41px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
+              @include tick-price;
             }
           }
           &::after {
@@ -459,20 +453,6 @@ a {
           }
         }
         &--poulet {
-          &::before {
-            @media screen and (max-width: 414px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -80px;
-              top: 18px;
-              background-color: white;
-              width: 69px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
-            }
-          }
           &::after {
             content: "40€";
           }
@@ -480,16 +460,7 @@ a {
         &--foie {
           &::before {
             @media screen and (max-width: 414px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -80px;
-              top: 41px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
+              @include tick-price;
             }
           }
           &::after {
@@ -515,16 +486,7 @@ a {
         &--magret {
           &::before {
             @media screen and (max-width: 414px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -77px;
-              top: 46px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
+              @include tick-price;
             }
           }
           &::after {
@@ -538,17 +500,8 @@ a {
         }
         &--pigeonneau {
           &::before {
-            @media screen and (max-width: 443px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -77px;
-              top: 46px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
+            @media screen and (max-width: 414px) {
+              @include tick-price;
             }
           }
           &::after {
@@ -568,16 +521,7 @@ a {
         &--mijoté {
           &::before {
             @media screen and (max-width: 443px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -77px;
-              top: 41px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
+              @include tick-price;
             }
           }
           &::after {
@@ -587,16 +531,7 @@ a {
         &--macaron {
           &::before {
             @media screen and (max-width: 443px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -77px;
-              top: 41px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
+              @include tick-price;
             }
           }
           &::after {
@@ -606,16 +541,7 @@ a {
         &--macaron-palette {
           &::before {
             @media screen and (max-width: 443px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -77px;
-              top: 41px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
+              @include tick-price;
             }
           }
           &::after {
@@ -625,16 +551,7 @@ a {
         &--mousse {
           &::before {
             @media screen and (max-width: 443px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -77px;
-              top: 41px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
+              @include tick-price;
             }
           }
           &::after {
@@ -644,16 +561,7 @@ a {
         &--oeuf {
           &::before {
             @media screen and (max-width: 443px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -77px;
-              top: 41px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
+              @include tick-price;
             }
           }
           &::after {
@@ -663,16 +571,7 @@ a {
         &--filet-herbes {
           &::before {
             @media screen and (max-width: 443px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -77px;
-              top: 41px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
+              @include tick-price;
             }
           }
           &::after {
@@ -682,16 +581,7 @@ a {
         &--parmentier {
           &::before {
             @media screen and (max-width: 443px) {
-              content: "...";
-              display: block;
-              position: relative;
-              left: -77px;
-              top: 41px;
-              background-color: white;
-              width: 25px;
-              height: 100px;
-              z-index: 100;
-              font-weight: 700;
+              @include tick-price;
             }
           }
           &::after {
