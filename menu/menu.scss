@@ -92,10 +92,10 @@ $multi: (
   content: "...";
   display: block;
   position: relative;
-  left: -80px;
+  left: -68px;
   top: 41px;
   background-color: white;
-  width: 25px;
+  width: 67px;
   height: 100px;
   z-index: 100;
   font-weight: 700;
@@ -406,12 +406,11 @@ a {
           content: "25€";
           display: block;
           position: absolute;
-          width: 38px;
+          width: 28px;
           margin-top: 57px;
           padding-bottom: 4px;
-          padding-left: 20px;
           top: -16px;
-          left: -99px;
+          left: -68px;
           font-weight: 500;
           transition: 250ms ease-in-out;
           z-index: 200;
@@ -420,7 +419,7 @@ a {
         & .fas {
           display: block;
           position: absolute;
-          left: 31%;
+          left: 29%;
           top: 32%;
           font-family: "Font Awesome 5 Free";
           font-weight: 600;
@@ -630,6 +629,25 @@ a {
             animation: check 250ms linear forwards;
           }
         }
+        &__filet-herbes {
+          &::after {
+            content: "Accompagné de sa ribambelle de légumes";
+            position: absolute;
+          }
+        }
+        &__mousse {
+          &::after {
+            content: "Au piment d'Espelette et à la truffe noire";
+            position: absolute;
+          }
+        }
+        &__macaron {
+          &::after {
+            content: "Glace au caramel brun et sel de Guérande";
+            position: absolute;
+          }
+        }
+
         &__head {
           line-height: 0;
           font-size: 1rem;
