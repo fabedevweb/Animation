@@ -443,7 +443,7 @@ a {
         }
         &--bouchée {
           &::before {
-            @media screen and (max-width: 414px) {
+            @media screen and (max-width: 375px) {
               @include tick-price;
             }
           }
@@ -458,7 +458,7 @@ a {
         }
         &--foie {
           &::before {
-            @media screen and (max-width: 414px) {
+            @media screen and (max-width: 375px) {
               @include tick-price;
             }
           }

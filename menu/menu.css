@@ -354,7 +354,7 @@ a {
 .menu .menu__meal__cards__tick--velouté::after {
   content: "25€";
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 375px) {
   .menu .menu__meal__cards__tick--bouchée::before {
     content: "...";
     display: block;
@@ -374,7 +374,7 @@ a {
 .menu .menu__meal__cards__tick--poulet::after {
   content: "40€";
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 375px) {
   .menu .menu__meal__cards__tick--foie::before {
     content: "...";
     display: block;
