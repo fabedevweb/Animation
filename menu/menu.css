@@ -39,9 +39,9 @@ a {
   }
 }
 
-.background-meal {
+.background-meal--menu_francaise {
   height: 800px;
-  background: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   background-size: cover;
   background-position: bottom;
   position: absolute;
@@ -50,17 +50,95 @@ a {
   z-index: -1;
 }
 @media screen and (max-width: 768px) {
-  .background-meal {
+  .background-meal--menu_francaise {
     height: 600px;
   }
 }
 @media screen and (max-width: 576px) {
-  .background-meal {
+  .background-meal--menu_francaise {
     height: 400px;
   }
 }
 @media screen and (max-width: 375px) {
-  .background-meal {
+  .background-meal--menu_francaise {
+    height: 290px;
+  }
+}
+
+.background-meal--menu_delice {
+  height: 800px;
+  background: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-size: cover;
+  background-position: bottom;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .background-meal--menu_delice {
+    height: 600px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .background-meal--menu_delice {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .background-meal--menu_delice {
+    height: 290px;
+  }
+}
+
+.background-meal--menu_note {
+  height: 800px;
+  background: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-size: cover;
+  background-position: left;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .background-meal--menu_note {
+    height: 600px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .background-meal--menu_note {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .background-meal--menu_note {
+    height: 290px;
+  }
+}
+
+.background-meal--menu_palette {
+  height: 800px;
+  background: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-size: cover;
+  background-position: bottom;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .background-meal--menu_palette {
+    height: 600px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .background-meal--menu_palette {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .background-meal--menu_palette {
     height: 290px;
   }
 }
@@ -236,11 +314,11 @@ a {
   content: "25€";
   display: block;
   position: absolute;
-  width: 37px;
+  width: 38px;
   margin-top: 57px;
   padding-bottom: 4px;
   padding-left: 20px;
-  top: -10px;
+  top: -16px;
   left: -99px;
   font-weight: 500;
   transition: 250ms ease-in-out;
@@ -261,12 +339,12 @@ a {
   z-index: 100;
 }
 @media screen and (max-width: 414px) {
-  .menu .menu__meal__cards__tick--velouté::before {
+  .menu .menu__meal__cards__tick--ravioles::before {
     content: "...";
     display: block;
     position: relative;
     left: -80px;
-    top: 46px;
+    top: 41px;
     background-color: white;
     width: 25px;
     height: 100px;
@@ -275,10 +353,64 @@ a {
   }
 }
 .menu .menu__meal__cards__tick--velouté::after {
+  content: "25€";
+}
+@media screen and (max-width: 414px) {
+  .menu .menu__meal__cards__tick--bouchée::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -80px;
+    top: 41px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
+.menu .menu__meal__cards__tick--bouchée::after {
+  content: "35€";
+}
+@media screen and (max-width: 414px) {
+  .menu .menu__meal__cards__tick--poulet::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -80px;
+    top: 18px;
+    background-color: white;
+    width: 69px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
+.menu .menu__meal__cards__tick--poulet::after {
+  content: "40€";
+}
+@media screen and (max-width: 414px) {
+  .menu .menu__meal__cards__tick--foie::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -80px;
+    top: 41px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
+.menu .menu__meal__cards__tick--foie::after {
+  content: "35€";
+}
+.menu .menu__meal__cards__tick--caviar::after {
   content: "35€";
 }
 .menu .menu__meal__cards__tick--soupe::after {
-  content: "20€";
+  content: "35€";
 }
 .menu .menu__meal__cards__tick--coquilles::after {
   content: "40€";
@@ -300,6 +432,9 @@ a {
 .menu .menu__meal__cards__tick--magret::after {
   content: "35€";
 }
+.menu .menu__meal__cards__tick--langoustine::after {
+  content: "35€";
+}
 @media screen and (max-width: 443px) {
   .menu .menu__meal__cards__tick--pigeonneau::before {
     content: "...";
@@ -317,8 +452,133 @@ a {
 .menu .menu__meal__cards__tick--pigeonneau::after {
   content: "44€";
 }
+.menu .menu__meal__cards__tick--cote::after {
+  content: "44€";
+}
 .menu .menu__meal__cards__tick--petales::after {
   content: "18€";
+}
+@media screen and (max-width: 443px) {
+  .menu .menu__meal__cards__tick--mijoté::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -77px;
+    top: 41px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
+.menu .menu__meal__cards__tick--mijoté::after {
+  content: "44€";
+}
+@media screen and (max-width: 443px) {
+  .menu .menu__meal__cards__tick--macaron::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -77px;
+    top: 41px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
+.menu .menu__meal__cards__tick--macaron::after {
+  content: "18€";
+}
+@media screen and (max-width: 443px) {
+  .menu .menu__meal__cards__tick--macaron-palette::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -77px;
+    top: 41px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
+.menu .menu__meal__cards__tick--macaron-palette::after {
+  content: "22€";
+}
+@media screen and (max-width: 443px) {
+  .menu .menu__meal__cards__tick--mousse::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -77px;
+    top: 41px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
+.menu .menu__meal__cards__tick--mousse::after {
+  content: "23€";
+}
+@media screen and (max-width: 443px) {
+  .menu .menu__meal__cards__tick--oeuf::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -77px;
+    top: 41px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
+.menu .menu__meal__cards__tick--oeuf::after {
+  content: "22€";
+}
+@media screen and (max-width: 443px) {
+  .menu .menu__meal__cards__tick--filet-herbes::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -77px;
+    top: 41px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
+.menu .menu__meal__cards__tick--filet-herbes::after {
+  content: "40€";
+}
+@media screen and (max-width: 443px) {
+  .menu .menu__meal__cards__tick--parmentier::before {
+    content: "...";
+    display: block;
+    position: relative;
+    left: -77px;
+    top: 41px;
+    background-color: white;
+    width: 25px;
+    height: 100px;
+    z-index: 100;
+    font-weight: 700;
+  }
+}
+.menu .menu__meal__cards__tick--parmentier::after {
+  content: "35€";
+}
+.menu .menu__meal__cards__tick--filet-turbo::after {
+  content: "44€";
 }
 .menu .menu__meal__cards__tick--fondant::after {
   content: "22€";
@@ -329,12 +589,15 @@ a {
 .menu .menu__meal__cards__tick--millefeuille::after {
   content: "23€";
 }
+.menu .menu__meal__cards__tick--homard::after {
+  content: "20€";
+}
 .menu .menu__meal__cards p {
   z-index: 100;
 }
 .menu .menu__meal__cards__child {
-  width: 96%;
-  margin-left: 23px;
+  width: 112%;
+  margin-left: 10px;
   padding-top: 10px;
 }
 .menu .menu__meal__cards__child:hover + .menu__meal__cards__tick {
@@ -527,4 +790,4 @@ a {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=menu.css.map */

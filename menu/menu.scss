@@ -138,11 +138,71 @@ a {
   }
 }
 
-.background-meal {
+.background-meal--menu_francaise {
   height: 800px;
-  background: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+  @media screen and (max-width: 768px) {
+    height: 600px;
+  }
+  @media screen and (max-width: 576px) {
+    height: 400px;
+  }
+  @media screen and (max-width: 375px) {
+    height: 290px;
+  }
+}
+
+.background-meal--menu_delice {
+  height: 800px;
+  background: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-size: cover;
+  background-position: bottom;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+  @media screen and (max-width: 768px) {
+    height: 600px;
+  }
+  @media screen and (max-width: 576px) {
+    height: 400px;
+  }
+  @media screen and (max-width: 375px) {
+    height: 290px;
+  }
+}
+
+.background-meal--menu_note {
+  height: 800px;
+  background: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-size: cover;
+  background-position: left;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+  @media screen and (max-width: 768px) {
+    height: 600px;
+  }
+  @media screen and (max-width: 576px) {
+    height: 400px;
+  }
+  @media screen and (max-width: 375px) {
+    height: 290px;
+  }
+}
+
+.background-meal--menu_palette {
+  height: 800px;
+  background: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-size: cover;
+  background-position: bottom;
   position: absolute;
   width: 100%;
   text-align: center;
@@ -165,7 +225,7 @@ a {
   margin-right: auto;
   margin-top: 700px;
   border-radius: 60px 60px 0 0;
-  height: auto;
+  height: 1500px;
   @media screen and (max-width: 992px) {
     width: 100%;
     margin-top: 638px;
@@ -254,7 +314,7 @@ a {
       align-items: center;
       padding-left: 60px;
       width: 240px;
-      margin: 50px auto 80px auto;
+      margin: 50px auto 0 auto;
       text-align: center;
       border: none;
       border-radius: 50px;
@@ -330,10 +390,6 @@ a {
         @media screen and (max-width: 992px) {
           left: 807px;
         }
-        @media screen and (max-width: 375px) {
-          width: 253px;
-          transform: translate(79px);
-        }
         &::after {
           content: "25€";
           display: block;
@@ -342,18 +398,13 @@ a {
           margin-top: 57px;
           padding-bottom: 4px;
           padding-left: 20px;
-          top: -11px;
+          top: -16px;
           left: -99px;
           font-weight: 500;
           transition: 250ms ease-in-out;
           z-index: 200;
           background-color: white;
-          @media screen and (max-width: 375px) {
-            padding-left: 0;
-            left: -78px;
-          }
         }
-
         & .fas {
           display: block;
           position: absolute;
@@ -366,13 +417,6 @@ a {
           color: white;
           text-align: center;
           z-index: 100;
-          @media screen and (max-width: 375px) {
-            left: 27%;
-          }
-          /*
-          transform: rotate(-360deg);
-          transition: 500ms 50ms ease-in-out;
-          */
         }
         &--ravioles {
           &::before {
@@ -381,9 +425,9 @@ a {
               display: block;
               position: relative;
               left: -80px;
-              top: 46px;
+              top: 41px;
               background-color: white;
-              width: 46px;
+              width: 25px;
               height: 100px;
               z-index: 100;
               font-weight: 700;
@@ -391,15 +435,20 @@ a {
           }
         }
         &--velouté {
+          &::after {
+            content: "25€";
+          }
+        }
+        &--bouchée {
           &::before {
             @media screen and (max-width: 414px) {
               content: "...";
               display: block;
               position: relative;
               left: -80px;
-              top: 46px;
+              top: 41px;
               background-color: white;
-              width: 46px;
+              width: 25px;
               height: 100px;
               z-index: 100;
               font-weight: 700;
@@ -409,23 +458,53 @@ a {
             content: "35€";
           }
         }
-        &--soupe {
+        &--poulet {
           &::before {
             @media screen and (max-width: 414px) {
               content: "...";
               display: block;
               position: relative;
-              left: -77px;
-              top: 46px;
+              left: -80px;
+              top: 18px;
               background-color: white;
-              width: 46px;
+              width: 69px;
               height: 100px;
               z-index: 100;
               font-weight: 700;
             }
           }
           &::after {
-            content: "20€";
+            content: "40€";
+          }
+        }
+        &--foie {
+          &::before {
+            @media screen and (max-width: 414px) {
+              content: "...";
+              display: block;
+              position: relative;
+              left: -80px;
+              top: 41px;
+              background-color: white;
+              width: 25px;
+              height: 100px;
+              z-index: 100;
+              font-weight: 700;
+            }
+          }
+          &::after {
+            content: "35€";
+          }
+        }
+        &--caviar {
+          &::after {
+            content: "35€";
+          }
+        }
+
+        &--soupe {
+          &::after {
+            content: "35€";
           }
         }
         &--coquilles {
@@ -434,11 +513,6 @@ a {
           }
         }
         &--magret {
-          &::after {
-            content: "35€";
-          }
-        }
-        &--pigeonneau {
           &::before {
             @media screen and (max-width: 414px) {
               content: "...";
@@ -447,7 +521,31 @@ a {
               left: -77px;
               top: 46px;
               background-color: white;
-              width: 46px;
+              width: 25px;
+              height: 100px;
+              z-index: 100;
+              font-weight: 700;
+            }
+          }
+          &::after {
+            content: "35€";
+          }
+        }
+        &--langoustine {
+          &::after {
+            content: "35€";
+          }
+        }
+        &--pigeonneau {
+          &::before {
+            @media screen and (max-width: 443px) {
+              content: "...";
+              display: block;
+              position: relative;
+              left: -77px;
+              top: 46px;
+              background-color: white;
+              width: 25px;
               height: 100px;
               z-index: 100;
               font-weight: 700;
@@ -457,23 +555,152 @@ a {
             content: "44€";
           }
         }
+        &--cote {
+          &::after {
+            content: "44€";
+          }
+        }
         &--petales {
           &::after {
             content: "18€";
           }
+        }
+        &--mijoté {
           &::before {
-            @media screen and (max-width: 414px) {
+            @media screen and (max-width: 443px) {
               content: "...";
               display: block;
               position: relative;
               left: -77px;
-              top: 46px;
+              top: 41px;
               background-color: white;
-              width: 46px;
+              width: 25px;
               height: 100px;
               z-index: 100;
               font-weight: 700;
             }
+          }
+          &::after {
+            content: "44€";
+          }
+        }
+        &--macaron {
+          &::before {
+            @media screen and (max-width: 443px) {
+              content: "...";
+              display: block;
+              position: relative;
+              left: -77px;
+              top: 41px;
+              background-color: white;
+              width: 25px;
+              height: 100px;
+              z-index: 100;
+              font-weight: 700;
+            }
+          }
+          &::after {
+            content: "18€";
+          }
+        }
+        &--macaron-palette {
+          &::before {
+            @media screen and (max-width: 443px) {
+              content: "...";
+              display: block;
+              position: relative;
+              left: -77px;
+              top: 41px;
+              background-color: white;
+              width: 25px;
+              height: 100px;
+              z-index: 100;
+              font-weight: 700;
+            }
+          }
+          &::after {
+            content: "22€";
+          }
+        }
+        &--mousse {
+          &::before {
+            @media screen and (max-width: 443px) {
+              content: "...";
+              display: block;
+              position: relative;
+              left: -77px;
+              top: 41px;
+              background-color: white;
+              width: 25px;
+              height: 100px;
+              z-index: 100;
+              font-weight: 700;
+            }
+          }
+          &::after {
+            content: "23€";
+          }
+        }
+        &--oeuf {
+          &::before {
+            @media screen and (max-width: 443px) {
+              content: "...";
+              display: block;
+              position: relative;
+              left: -77px;
+              top: 41px;
+              background-color: white;
+              width: 25px;
+              height: 100px;
+              z-index: 100;
+              font-weight: 700;
+            }
+          }
+          &::after {
+            content: "22€";
+          }
+        }
+        &--filet-herbes {
+          &::before {
+            @media screen and (max-width: 443px) {
+              content: "...";
+              display: block;
+              position: relative;
+              left: -77px;
+              top: 41px;
+              background-color: white;
+              width: 25px;
+              height: 100px;
+              z-index: 100;
+              font-weight: 700;
+            }
+          }
+          &::after {
+            content: "40€";
+          }
+        }
+        &--parmentier {
+          &::before {
+            @media screen and (max-width: 443px) {
+              content: "...";
+              display: block;
+              position: relative;
+              left: -77px;
+              top: 41px;
+              background-color: white;
+              width: 25px;
+              height: 100px;
+              z-index: 100;
+              font-weight: 700;
+            }
+          }
+          &::after {
+            content: "35€";
+          }
+        }
+        &--filet-turbo {
+          &::after {
+            content: "44€";
           }
         }
         &--fondant {
@@ -491,11 +718,6 @@ a {
             content: "23€";
           }
         }
-        &--soupe {
-          &::after {
-            content: "35€";
-          }
-        }
         &--homard {
           &::after {
             content: "20€";
@@ -506,12 +728,9 @@ a {
         z-index: 100;
       }
       &__child {
-        width: 96%;
-        margin-left: 13px;
+        width: 112%;
+        margin-left: 10px;
         padding-top: 10px;
-        @media screen and (max-width: 375px) {
-          width: 288%;
-        }
         &:hover + .menu__meal__cards__tick {
           transform: translate(0px);
           &::after {
@@ -551,6 +770,15 @@ a {
         animation: cards-3 1000ms 200ms cubic-bezier(0, 1.08, 0.57, 1) forwards;
       }
     }
+  }
+}
+
+@keyframes heart {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
   }
 }
 
