@@ -331,6 +331,7 @@ a {
   margin-left: 0px;
   font-size: 2rem;
   background: linear-gradient(to top left, #a16be0, #ff93e1);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -406,6 +407,8 @@ a {
   width: 100px;
   border-radius: 0 20px 20px 0;
   background-color: #99e2d0;
+  transform: translate(101px);
+  transition: 250ms ease-in-out;
   -webkit-transform: translate(101px);
   -webkit-transition: 250ms ease-in-out;
 }
@@ -425,6 +428,7 @@ a {
   left: -68px;
   font-weight: 500;
   transition: 250ms ease-in-out;
+  -webkit-transition: 250ms ease-in-out;
   z-index: 200;
   background-color: white;
 }
@@ -690,12 +694,15 @@ a {
   padding-top: 10px;
 }
 .menu .menu__meal__cards__child:hover + .menu__meal__cards__tick {
+  transform: translate(0px);
   -webkit-transform: translate(0px);
 }
 .menu .menu__meal__cards__child:hover + .menu__meal__cards__tick::after {
+  transform: translate(40px);
   -webkit-transform: translate(40px);
 }
 .menu .menu__meal__cards__child:hover + .menu__meal__cards__tick .fa-check-circle {
+  animation: check 250ms linear forwards;
   -webkit-animation: check 250ms linear forwards;
 }
 .menu .menu__meal__cards__child__filet-herbes::after {
@@ -749,9 +756,11 @@ a {
 }
 @keyframes check {
   from {
+    transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
   }
   to {
+    transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
   }
 }
@@ -759,30 +768,42 @@ a {
   from {
     transform: translateY(-20px);
     opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -webkit-opacity: 0;
   }
   to {
     transform: translateY(0);
     opacity: 1;
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
   }
 }
 @keyframes cards-2 {
   from {
     transform: translateY(-20px);
     opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -webkit-opacity: 0;
   }
   to {
     transform: translateY(0);
     opacity: 1;
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
   }
 }
 @keyframes cards-3 {
   from {
     transform: translateY(-20px);
     opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -webkit-opacity: 0;
   }
   to {
     transform: translateY(0);
     opacity: 1;
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
   }
 }
 
