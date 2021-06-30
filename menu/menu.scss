@@ -274,8 +274,8 @@
         width: 100px;
         border-radius: 0 20px 20px 0;
         background-color: $color-tertiary;
-        transform: translate(101px);
-        transition: 250ms ease-in-out;
+        -webkit-transform: translate(101px);
+        -webkit-transition: 250ms ease-in-out;
         @media screen and (max-width: map-get($breakpoints, tablet-medium)) {
           left: 807px;
         }
@@ -498,12 +498,12 @@
         margin-left: 10px;
         padding-top: 10px;
         &:hover + .menu__meal__cards__tick {
-          transform: translate(0px);
+          -webkit-transform: translate(0px);
           &::after {
-            transform: translate(40px);
+            -webkit-transform: translate(40px);
           }
           & .fa-check-circle {
-            animation: check 250ms linear forwards;
+            -webkit-animation: check 250ms linear forwards;
           }
         }
         &__filet-herbes {
@@ -569,10 +569,10 @@
 
 @keyframes check {
   from {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
   }
 }
 
