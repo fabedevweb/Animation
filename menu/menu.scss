@@ -1,141 +1,11 @@
-$color-primary: #9356dc;
-$color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
-$color-four: #f6f6f6;
-$color-five: #f5edff;
-$color-six: #353535;
-$color-seven: #7e7e7e;
-$color-eight: #fff;
-$color-header-primary: #cfcfcf;
-$color-header-secondary: #eaeaea;
-$font-title: "Shrikhand", cursive;
-$font-text: "Roboto", sans-serif;
-$font-weith: 100;
-$font-size-h1: 2rem;
-$font-size-h2: 2rem;
-$intensity-color: (
-  ligthen-color-primary:
-    lighten(
-      $color: $color-primary,
-      $amount: 35%,
-    ),
-  ligthen-color-seven:
-    lighten(
-      $color: $color-seven,
-      $amount: 35%,
-    ),
-  darken-color-tertiary:
-    darken(
-      $color: $color-tertiary,
-      $amount: 50%,
-    ),
-);
-$font: (
-  familly: $font-title,
-  familly-logo: $font-title,
-  text: $font-text,
-  weith: 300,
-  font-size-h1: $font-size-h1,
-  font-size-h2: $font-size-h2,
-);
-@mixin font-head {
-  font-family: map-get($map: $font, $key: familly-logo);
-  font-size: map-get($map: $font, $key: font-size-h1);
-}
-@mixin btn {
-  width: auto;
-  margin: auto;
-  padding: 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  background: linear-gradient(to top left, $color-primary, $color-secondary);
-  color: $color-eight;
-  font-weight: 400;
-  font-size: 1.3rem;
-  box-shadow: map-get($map: $intensity-color, $key: ligthen-color-seven) 0px 5px
-    5px;
-}
-@mixin margin {
-  width: 1200px;
-  margin: auto;
-}
-@function multi($nb) {
-  $resultat: $nb * 3;
-  @return $resultat;
-}
-@function multi-default($nb) {
-  $resultat: $nb * 1;
-  @return $resultat;
-}
-
-$multi: (
-  multi-width: multi(334),
-  multi-height: multi(174),
-  multi-width-default: multi-default(334),
-  multi-height-default: multi-default(174),
-);
-
-@mixin cards-img {
-  width: map-get($map: $multi, $key: multi-width) + px;
-  height: map-get($map: $multi, $key: multi-height) + px;
-  object-fit: cover;
-  border-radius: 50px 50px 0 0;
-}
-
-@mixin cards {
-  justify-self: center;
-  background-color: $color-eight;
-  border-radius: 15px;
-  height: 370px;
-}
-@mixin tick-price {
-  content: "...";
-  display: block;
-  position: relative;
-  left: -68px;
-  top: 41px;
-  background-color: white;
-  width: 67px;
-  height: 100px;
-  z-index: 100;
-  font-weight: 700;
-}
-
-@media screen and (max-width: 1000px) {
-  html,
-  body {
-    overflow-x: hidden;
-  }
-}
-$breakpoints: (
-  mobile-small: 375px,
-  mobile-medium: 576px,
-  mobile-large: 414px,
-  tablet: 768px,
-  tablet-large: 1024px,
-  desktop: 1280px,
-);
-
-@mixin flexbox {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: $font-text;
-  font-weight: map-get($font, weith);
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
+@import "../sass/utils/_variables.scss";
+@import "../sass/base/_typographymenu.scss";
+@import "../sass/utils/_mixinsmenu.scss";
+@import "../sass/utils/_functionsmenu.scss";
+@import "../sass/utils/_maps.scss";
+@import "../sass/layout/_footer.scss";
+@import "../sass/base/_base.scss";
+@import "../sass/utils/_variablesmenu.scss";
 
 .header {
   &__child {
@@ -152,7 +22,7 @@ a {
     &__arrow {
       font-size: 1.5rem;
     }
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: map-get($breakpoints, tablet-medium)) {
       width: 80%;
     }
   }
@@ -167,13 +37,13 @@ a {
   width: 100%;
   text-align: center;
   z-index: -1;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: map-get($breakpoints, tablet)) {
     height: 600px;
   }
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: map-get($breakpoints, mobile-medium)) {
     height: 400px;
   }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: map-get($breakpoints, mobile-small)) {
     height: 290px;
   }
 }
@@ -187,13 +57,13 @@ a {
   width: 100%;
   text-align: center;
   z-index: -1;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: map-get($breakpoints, tablet)) {
     height: 600px;
   }
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: map-get($breakpoints, mobile-medium)) {
     height: 400px;
   }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: map-get($breakpoints, mobile-small)) {
     height: 290px;
   }
 }
@@ -207,13 +77,13 @@ a {
   width: 100%;
   text-align: center;
   z-index: -1;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: map-get($breakpoints, tablet)) {
     height: 600px;
   }
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: map-get($breakpoints, mobile-medium)) {
     height: 400px;
   }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: map-get($breakpoints, mobile-small)) {
     height: 290px;
   }
 }
@@ -227,13 +97,13 @@ a {
   width: 100%;
   text-align: center;
   z-index: -1;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: map-get($breakpoints, tablet)) {
     height: 600px;
   }
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: map-get($breakpoints, mobile-medium)) {
     height: 400px;
   }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: map-get($breakpoints, mobile-small)) {
     height: 290px;
   }
 }
@@ -246,17 +116,17 @@ a {
   margin-top: 700px;
   border-radius: 60px 60px 0 0;
   height: 1500px;
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: map-get($breakpoints, tablet-medium)) {
     width: 100%;
     margin-top: 638px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: map-get($breakpoints, tablet)) {
     margin-top: 480px;
   }
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: map-get($breakpoints, mobile-medium)) {
     margin-top: 320px;
   }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: map-get($breakpoints, mobile-small)) {
     margin-top: 235px;
   }
   &__head {
@@ -406,7 +276,7 @@ a {
         background-color: $color-tertiary;
         transform: translate(101px);
         transition: 250ms ease-in-out;
-        @media screen and (max-width: 992px) {
+        @media screen and (max-width: map-get($breakpoints, tablet-medium)) {
           left: 807px;
         }
         &::after {
@@ -438,7 +308,7 @@ a {
         }
         &--ravioles {
           &::before {
-            @media screen and (max-width: 414px) {
+            @media screen and (max-width: map-get($breakpoints, mobile-large)) {
               @include tick-price;
             }
           }
@@ -450,7 +320,7 @@ a {
         }
         &--bouchée {
           &::before {
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: map-get($breakpoints, mobile-small)) {
               @include tick-price;
             }
           }
@@ -465,7 +335,7 @@ a {
         }
         &--foie {
           &::before {
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: map-get($breakpoints, mobile-small)) {
               @include tick-price;
             }
           }
@@ -491,7 +361,7 @@ a {
         }
         &--magret {
           &::before {
-            @media screen and (max-width: 414px) {
+            @media screen and (max-width: map-get($breakpoints, mobile-large)) {
               @include tick-price;
             }
           }
@@ -506,7 +376,7 @@ a {
         }
         &--pigeonneau {
           &::before {
-            @media screen and (max-width: 414px) {
+            @media screen and (max-width: map-get($breakpoints, mobile-large)) {
               @include tick-price;
             }
           }
@@ -526,7 +396,7 @@ a {
         }
         &--mijoté {
           &::before {
-            @media screen and (max-width: 443px) {
+            @media screen and (max-width: map-get($breakpoints, mobile-large-plus)) {
               @include tick-price;
             }
           }
@@ -536,7 +406,7 @@ a {
         }
         &--macaron {
           &::before {
-            @media screen and (max-width: 443px) {
+            @media screen and (max-width: map-get($breakpoints, mobile-large-plus)) {
               @include tick-price;
             }
           }
@@ -546,7 +416,7 @@ a {
         }
         &--macaron-palette {
           &::before {
-            @media screen and (max-width: 443px) {
+            @media screen and (max-width: map-get($breakpoints, mobile-large-plus)) {
               @include tick-price;
             }
           }
@@ -556,7 +426,7 @@ a {
         }
         &--mousse {
           &::before {
-            @media screen and (max-width: 443px) {
+            @media screen and (max-width: map-get($breakpoints, mobile-large-plus)) {
               @include tick-price;
             }
           }
@@ -566,7 +436,7 @@ a {
         }
         &--oeuf {
           &::before {
-            @media screen and (max-width: 443px) {
+            @media screen and (max-width: map-get($breakpoints, mobile-large-plus)) {
               @include tick-price;
             }
           }
@@ -576,7 +446,7 @@ a {
         }
         &--filet-herbes {
           &::before {
-            @media screen and (max-width: 443px) {
+            @media screen and (max-width: map-get($breakpoints, mobile-large-plus)) {
               @include tick-price;
             }
           }
@@ -586,7 +456,7 @@ a {
         }
         &--parmentier {
           &::before {
-            @media screen and (max-width: 443px) {
+            @media screen and (max-width: map-get($breakpoints, mobile-large-plus)) {
               @include tick-price;
             }
           }
@@ -736,97 +606,5 @@ a {
   to {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-.footer {
-  background-color: #353535;
-  &__child {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 300px;
-    margin: auto;
-    @include margin;
-    color: $color-eight;
-    font-size: map-get($map: $font, $key: font-size);
-    &__logo {
-      &__img {
-        font-family: map-get($map: $font, $key: familly-logo);
-      }
-    }
-    &__text {
-      display: flex;
-      align-items: center;
-      font-size: 1.5rem;
-      font-weight: 400;
-      & a {
-        color: $color-eight;
-      }
-      & i {
-        margin-right: 20px;
-      }
-      &:nth-child(2) {
-        @media screen and (max-width: 1200px) {
-          grid-row: 2;
-          grid-column: 1;
-        }
-        @media screen and (max-width: 992px) {
-          grid-row: 2;
-          grid-column: 1;
-        }
-        @media screen and (max-width: 768px) {
-          line-height: 0px;
-        }
-      }
-      &:nth-child(3) {
-        @media screen and (max-width: 1200px) {
-          grid-row: 3;
-          grid-column: 1;
-        }
-        @media screen and (max-width: 768px) {
-          line-height: 0px;
-        }
-      }
-      &:nth-child(4) {
-        @media screen and (max-width: 1200px) {
-          grid-row: 2;
-          grid-column: 2;
-          justify-self: right;
-        }
-        @media screen and (max-width: 768px) {
-          line-height: 0px;
-          display: block;
-        }
-      }
-      &:nth-child(5) {
-        @media screen and (max-width: 1200px) {
-          grid-row: 3;
-          grid-column: 2;
-          justify-self: right;
-        }
-        @media screen and (max-width: 768px) {
-          line-height: 40px;
-          display: block;
-          margin: 0;
-        }
-      }
-    }
-    @media screen and (max-width: 1200px) {
-      width: 90%;
-      height: auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-    }
-    @media screen and (max-width: 768px) {
-      display: block;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    height: 310px;
-    margin-top: 0;
-    line-height: 0;
-    padding-top: 20px;
   }
 }

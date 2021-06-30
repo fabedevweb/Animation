@@ -1,0 +1,18 @@
+@mixin margin {
+  width: 1200px;
+}
+
+@mixin cards-img {
+  width: map-get($map: $multi, $key: multi-width) + px;
+  height: map-get($map: $multi, $key: multi-height) + px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+@mixin cards {
+  justify-self: center;
+  background-color: $color-eight;
+  border-radius: 15px;
+  height: 370px;
+}

@@ -1,0 +1,89 @@
+.footer {
+  margin-top: 50px;
+  background-color: #353535;
+  &__child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    margin: auto;
+    @include margin;
+    color: $color-eight;
+    font-size: map-get($map: $font, $key: font-size);
+    &__logo {
+      &__img {
+        font-family: map-get($map: $font, $key: familly-logo);
+      }
+    }
+    &__text {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: 400;
+      & i {
+        margin-right: 20px;
+      }
+      & a {
+        color: $color-eight;
+      }
+      &:nth-child(2) {
+        @media screen and (max-width: map-get($breakpoints, desktop)) {
+          grid-row: 2;
+          grid-column: 1;
+        }
+        @media screen and (max-width: map-get($breakpoints, tablet)) {
+          line-height: 0px;
+        }
+      }
+      &:nth-child(3) {
+        @media screen and (max-width: map-get($breakpoints, desktop)) {
+          grid-row: 3;
+          grid-column: 1;
+        }
+        @media screen and (max-width: map-get($breakpoints, tablet)) {
+          line-height: 0px;
+        }
+      }
+      &:nth-child(4) {
+        @media screen and (max-width: map-get($breakpoints, desktop)) {
+          grid-row: 2;
+          grid-column: 2;
+          justify-self: right;
+        }
+        @media screen and (max-width: map-get($breakpoints, tablet)) {
+          line-height: 0px;
+          display: block;
+        }
+      }
+      &:nth-child(5) {
+        @media screen and (max-width: map-get($breakpoints, desktop)) {
+          grid-row: 3;
+          grid-column: 2;
+          justify-self: right;
+        }
+        @media screen and (max-width: map-get($breakpoints, tablet)) {
+          line-height: 40px;
+          display: block;
+          margin: 0;
+        }
+      }
+    }
+    @media screen and (max-width: map-get($breakpoints, desktop)) {
+      width: 90%;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+    @media screen and (max-width: map-get($breakpoints, tablet)) {
+      display: block;
+      width: 334px;
+    }
+  }
+  @media screen and (max-width: map-get($breakpoints, tablet)) {
+    height: 310px;
+    margin-top: 0;
+    line-height: 0;
+    padding-top: 20px;
+  }
+}

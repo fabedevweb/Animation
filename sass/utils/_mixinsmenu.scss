@@ -1,0 +1,55 @@
+@mixin margin {
+  width: 1200px;
+}
+
+@mixin font-head {
+  font-family: map-get($map: $font, $key: familly-logo);
+  font-size: map-get($map: $font, $key: font-size-h1);
+}
+@mixin btn {
+  width: auto;
+  margin: auto;
+  padding: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(to top left, $color-primary, $color-secondary);
+  color: $color-eight;
+  font-weight: 400;
+  font-size: 1.3rem;
+  box-shadow: map-get($map: $intensity-color, $key: ligthen-color-seven) 0px 5px
+    5px;
+}
+
+@mixin cards-img {
+  width: map-get($map: $multi, $key: multi-width) + px;
+  height: map-get($map: $multi, $key: multi-height) + px;
+  object-fit: cover;
+  border-radius: 50px 50px 0 0;
+}
+
+@mixin cards {
+  justify-self: center;
+  background-color: $color-eight;
+  border-radius: 15px;
+  height: 370px;
+}
+@mixin tick-price {
+  content: "...";
+  display: block;
+  position: relative;
+  left: -68px;
+  top: 41px;
+  background-color: white;
+  width: 67px;
+  height: 100px;
+  z-index: 100;
+  font-weight: 700;
+}
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}

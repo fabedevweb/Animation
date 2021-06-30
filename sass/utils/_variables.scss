@@ -1,0 +1,39 @@
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$color-four: #f6f6f6;
+$color-five: #f5edff;
+$color-six: #353535;
+$color-seven: #7e7e7e;
+$color-eight: #fff;
+$color-header-primary: #cfcfcf;
+$color-header-secondary: #eaeaea;
+
+$intensity-color: (
+  ligthen-color-primary:
+    lighten(
+      $color: $color-primary,
+      $amount: 35%,
+    ),
+  ligthen-color-seven:
+    lighten(
+      $color: $color-seven,
+      $amount: 35%,
+    ),
+  darken-color-tertiary:
+    darken(
+      $color: $color-tertiary,
+      $amount: 50%,
+    ),
+);
+
+$breakpoints: (
+  mobile-small: 375px,
+  mobile-medium: 576px,
+  mobile-large: 414px,
+  mobile-large-plus: 443px,
+  tablet: 768px,
+  tablet-medium: 992px,
+  tablet-large: 1024px,
+  desktop: 1280px,
+);

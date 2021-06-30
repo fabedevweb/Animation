@@ -1,0 +1,8 @@
+@function multi($nb) {
+  $resultat: $nb * 3;
+  @return $resultat;
+}
+@function multi-default($nb) {
+  $resultat: $nb * 1;
+  @return $resultat;
+}
