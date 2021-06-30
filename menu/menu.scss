@@ -276,7 +276,7 @@
         background-color: $color-tertiary;
         -webkit-transform: translate(101px);
         -webkit-transition: 250ms ease-in-out;
-        @media screen and (max-width: map-get($breakpoints, tablet-medium)) {
+        @media screen and (max-width: 576px) {
           left: 807px;
         }
         &::after {
@@ -308,7 +308,7 @@
         }
         &--ravioles {
           &::before {
-            @media screen and (max-width: map-get($breakpoints, mobile-large)) {
+            @media screen and (max-width: 414px) {
               @include tick-price;
             }
           }
@@ -320,7 +320,7 @@
         }
         &--bouchée {
           &::before {
-            @media screen and (max-width: map-get($breakpoints, mobile-small)) {
+            @media screen and (max-width: 375px) {
               @include tick-price;
             }
           }
@@ -335,7 +335,7 @@
         }
         &--foie {
           &::before {
-            @media screen and (max-width: map-get($breakpoints, mobile-small)) {
+            @media screen and (max-width: 375px) {
               @include tick-price;
             }
           }
@@ -361,7 +361,7 @@
         }
         &--magret {
           &::before {
-            @media screen and (max-width: map-get($breakpoints, mobile-large)) {
+            @media screen and (max-width: 414px) {
               @include tick-price;
             }
           }
@@ -376,7 +376,7 @@
         }
         &--pigeonneau {
           &::before {
-            @media screen and (max-width: map-get($breakpoints, mobile-large)) {
+            @media screen and (max-width: 414px) {
               @include tick-price;
             }
           }
@@ -396,7 +396,7 @@
         }
         &--mijoté {
           &::before {
-            @media screen and (max-width: map-get($breakpoints, mobile-large-plus)) {
+            @media screen and (max-width: 443px) {
               @include tick-price;
             }
           }
@@ -406,7 +406,7 @@
         }
         &--macaron {
           &::before {
-            @media screen and (max-width: map-get($breakpoints, mobile-large-plus)) {
+            @media screen and (max-width: 443px) {
               @include tick-price;
             }
           }
@@ -416,7 +416,7 @@
         }
         &--macaron-palette {
           &::before {
-            @media screen and (max-width: map-get($breakpoints, mobile-large-plus)) {
+            @media screen and (max-width: 443px) {
               @include tick-price;
             }
           }
@@ -426,7 +426,7 @@
         }
         &--mousse {
           &::before {
-            @media screen and (max-width: map-get($breakpoints, mobile-large-plus)) {
+            @media screen and (max-width: 443px) {
               @include tick-price;
             }
           }
@@ -436,7 +436,7 @@
         }
         &--oeuf {
           &::before {
-            @media screen and (max-width: map-get($breakpoints, mobile-large-plus)) {
+            @media screen and (max-width: 443px) {
               @include tick-price;
             }
           }
@@ -446,7 +446,7 @@
         }
         &--filet-herbes {
           &::before {
-            @media screen and (max-width: map-get($breakpoints, mobile-large-plus)) {
+            @media screen and (max-width: 443px) {
               @include tick-price;
             }
           }
@@ -456,7 +456,7 @@
         }
         &--parmentier {
           &::before {
-            @media screen and (max-width: map-get($breakpoints, mobile-large-plus)) {
+            @media screen and (max-width: 443px) {
               @include tick-price;
             }
           }

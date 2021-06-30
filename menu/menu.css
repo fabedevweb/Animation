@@ -409,7 +409,7 @@ a {
   -webkit-transform: translate(101px);
   -webkit-transition: 250ms ease-in-out;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 576px) {
   .menu .menu__meal__cards__tick {
     left: 807px;
   }
