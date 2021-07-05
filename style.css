@@ -722,7 +722,7 @@ a {
   transition: height 2s ease-in-out;
   -webkit-transition: height 2s ease-in-out;
 }
-.article__child__cards .heart-test__fill::before, .article__child__cards .heart-test__fill::after {
+.article__child__cards .heart-test__fill::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "";
