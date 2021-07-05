@@ -735,6 +735,7 @@ a {
   margin-left: 0px;
   font-size: 1.7rem;
   background: linear-gradient(to top left, #a16be0, #ff93e1);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

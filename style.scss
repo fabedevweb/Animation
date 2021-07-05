@@ -560,6 +560,7 @@
             lighten($color-primary, 5%),
             lighten($color-secondary, 5%)
           );
+          background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
